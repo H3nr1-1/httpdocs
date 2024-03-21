@@ -7,14 +7,17 @@ body{
 
 .container{
     margin: 0 auto;
+    background: rgb(186, 159, 123);
     width:60%;
+    border-radius: 15px;
+    border: 3px solid red;
+    box-shadow: 0px 0px 15px red;
     font-family: "Chela One", system-ui;
 }
 
 header{
     font-size: 200%;
     text-align: center;
-    background: rgb(241, 231, 206);
     padding: 3%;
 }
 
@@ -30,11 +33,12 @@ h3{
 
 nav{
     text-align: center;
+    margin-left: -5%;
 }
 
 ul li{
     display: block;
-    padding: 5%;
+    padding: 3%;
 }
 
 a{
@@ -47,8 +51,8 @@ a{
 #links{
     background: rgb(172, 111, 111);
     border: 3px solid rgb(207, 206, 148);
-    border-radius: 15%;
-    padding:5%;
+    border-radius: 15px;
+    padding:2%;
 }
 
 #links:hover{
@@ -58,12 +62,24 @@ a{
 }
 
 footer{
-    text-align: right;
     margin-top: 5%;
+}
+
+.foot-link{
+    align-items: left;
+}
+
+#valid{
+    margin-left: 40%;
+}
+
+#valid2{
+    margin-left: 3%;
 }
 
 footer a{
     padding: 3%;
+    font-size: 100%;
 }
 
 footer a:hover{
