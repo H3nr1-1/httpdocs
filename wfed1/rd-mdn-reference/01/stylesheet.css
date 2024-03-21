@@ -11,6 +11,7 @@ body{
     max-width: 676px;
     text-align: center;
     border-radius: 15px;
+    box-shadow: 0 0 10px rgb(110, 160, 221);
 }
 
 header{
@@ -20,11 +21,15 @@ header{
 }
 
 section{
-    padding:3%;
+    padding:1%;
 }
 
 p{
     text-align: justify;
+    border: 5px solid white;
+    border-radius: 2px;
+    box-shadow: 0 0 10px white;
+    padding: 2%;
 }
 
 a{
@@ -49,11 +54,33 @@ a{
     text-decoration: underline;
 }
 
+.valid{
+    margin-left: 40%;
+    color:black;
+}
+
+.valid2{
+    margin-left: 3%;
+    color:black;
+}
+
 footer{
     padding: 3%;
     text-align: justify;
 }
 
+#foot-link{
+    color:black;
+}
+
 #foot-link:hover{
+    text-decoration: underline;
+}
+
+.valid:hover{
+    text-decoration: underline;
+}
+
+.valid2:hover{
     text-decoration: underline;
 }
