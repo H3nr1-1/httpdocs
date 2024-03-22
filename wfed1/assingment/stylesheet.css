@@ -41,7 +41,7 @@ nav{
 
 ul li{
     display: block;
-    padding: 3%;
+    padding: 1%;
 }
 
 a{
@@ -53,6 +53,8 @@ a{
 
 .links{
     background: #E4E4DE;
+    width: 400px;
+    display: inline-block;
     border: 3px solid #1B1B1B;
     border-radius: 15px;
     padding:2%;
