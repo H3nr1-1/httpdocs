@@ -42,7 +42,7 @@ section{
     font-family: "Playfair Display", serif;
     background: antiquewhite;
     padding: 15px;
-    box-shadow: 0 0 10px rgb(7, 28, 92);
+    box-shadow: 5px 5px 10px rgb(7, 28, 92);
     border-radius: 10px;
 }
 
@@ -57,7 +57,8 @@ p{
     display: grid;
     gap: 20px; 
     padding-bottom: 20px; 
-    border-bottom: 1px solid #000; 
+    border-bottom: 5px solid rgb(7, 28, 92); 
+    border-left: 5px solid rgb(7, 28, 92);
     margin-bottom: 20px; 
 }
 
