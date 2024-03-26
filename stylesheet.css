@@ -9,19 +9,21 @@ body{
 
 .container{
     margin: 0 auto;
+    display: block;
     background: #C4C5BA;
-    width:60%;
+    max-width:1000px;
     border-radius: 15px;
     border: 3px solid #1B1B1B;
     box-shadow: 0px 0px 15px #1B1B1B;
     font-family: "Chela One", system-ui;
+    flex-direction: column;
 }
 
 header{
     text-align: center;
-    font-size: 200%;
-    margin-top: 5%;
-    margin-bottom:5%;
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom:10px;
 }
 
 h1{
@@ -36,17 +38,16 @@ h3{
 
 nav{
     text-align: center;
-    margin-left: -5%;
+    margin-left: -15px;
 }
 
 ul li{
     display: block;
-    padding: 1%;
+    padding: 5px;
 }
 
 a{
     font-family: "Madimi One", sans-serif;
-    font-size: 150%;
     color: black;
     text-decoration: none;
 }
@@ -54,10 +55,11 @@ a{
 .links{
     background: #E4E4DE;
     width: 400px;
+    font-size: 1.5em;
     display: inline-block;
     border: 3px solid #1B1B1B;
     border-radius: 15px;
-    padding:2%;
+    padding:10px;
 }
 
 .links:hover{
@@ -68,29 +70,26 @@ a{
 }
 
 footer{
-    margin-top: 5%;
-    margin-bottom: 3%;
+    padding:20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
-.foot-link{
-    text-align: left;
-    margin-left: 5%;
-}
-
-#valid{
-    margin-left: 30%;
-}
-
-#valid2{
-    margin-left: 2%;
+.foot-links{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
 }
 
 footer a{
-    padding: 3%;
-    font-size: 100%;
+    padding: 10px;
 }
 
 footer a:hover{
     text-decoration: underline;
+    color: royalblue;
 }
 
+
+
+ 
