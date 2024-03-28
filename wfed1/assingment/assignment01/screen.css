@@ -42,7 +42,7 @@ section{
     font-family: "Playfair Display", serif;
     background: antiquewhite;
     padding: 15px;
-    box-shadow: 5px 5px 10px rgb(7, 28, 92);
+    box-shadow: 5px 0px 10px rgb(7, 28, 92);
     border-radius: 10px;
 }
 
@@ -91,6 +91,10 @@ a{
     border: 5px solid royalblue; 
     border-radius: 10px;
     margin-top: 40px;
+}
+
+figcaption{
+    font-size: 1.5rem;
 }
 
 .post-featured-image img:hover{
