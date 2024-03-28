@@ -9,12 +9,16 @@ body{
 
 .container{
     margin: 0 auto;
+    display: grid;
+    justify-content: center; /* Center horizontally */
+    align-items: center;   
     background: #C4C5BA;
     max-width:1000px;
     border-radius: 15px;
     border: 3px solid #1B1B1B;
     box-shadow: 0px 0px 15px #1B1B1B;
     font-family: "Chela One", system-ui;
+    flex-direction: column;
 }
 
 header{
@@ -36,7 +40,10 @@ h3{
 
 nav{
     text-align: center;
-    margin-left: -15px;
+}
+
+ul{
+    padding: 0;
 }
 
 ul li{
@@ -52,7 +59,7 @@ a{
 
 .links{
     background: #E4E4DE;
-    width: 400px;
+    min-width: 300px;
     font-size: 1.5em;
     display: inline-block;
     border: 3px solid #1B1B1B;
@@ -68,7 +75,7 @@ a{
 }
 
 footer{
-    padding: 20px;
+    padding:20px;
     margin-top: 15px;
     margin-bottom: 10px;
 }
@@ -76,7 +83,6 @@ footer{
 .foot-links{
     display: flex;
     justify-content: flex-end;
-    margin-right: 50px;
 }
 
 footer a{
@@ -87,3 +93,13 @@ footer a:hover{
     text-decoration: underline;
     color: royalblue;
 }
+
+@media screen and (max-width:768px){
+
+    header{
+        font-size: 1.5em;
+    }
+
+}
+
+ 
