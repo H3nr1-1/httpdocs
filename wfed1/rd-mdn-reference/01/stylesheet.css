@@ -8,7 +8,7 @@ body{
 .container{
     background: rgb(110, 160, 221);
     margin: 0 auto;
-    max-width: 676px;
+    max-width: 1000px;
     text-align: center;
     box-shadow: 0 0 10px rgb(110, 160, 221);
     border-radius: 15px;

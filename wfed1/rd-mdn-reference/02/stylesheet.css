@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: linear-gradient(
+        125deg,
+        hsl(61deg 86% 41%) 1%,
+        hsl(72deg 88% 44%) 9%,
+        hsl(83deg 90% 46%) 15%,
+        hsl(93deg 93% 48%) 21%,
+        hsl(104deg 96% 50%) 27%,
+        hsl(136deg 88% 53%) 33%,
+        hsl(158deg 71% 48%) 39%,
+        hsl(187deg 65% 45%) 44%,
+        hsl(214deg 73% 52%) 50%,
+        hsl(249deg 98% 52%) 56%,
+        hsl(256deg 92% 50%) 61%,
+        hsl(262deg 91% 48%) 66%,
+        hsl(267deg 93% 46%) 72%,
+        hsl(272deg 95% 44%) 77%,
+        hsl(277deg 88% 46%) 82%,
+        hsl(282deg 82% 49%) 87%,
+        hsl(286deg 84% 52%) 92%,
+        hsl(289deg 90% 55%) 97%,
+        hsl(292deg 96% 57%) 100%
+      );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: block;
+    font-family: "Merriweather", serif;
+    gap: 10px;
+    padding: 15px;
+    background-image: linear-gradient(
+  45deg,
+  hsl(307deg 100% 20%) 0%,
+  hsl(320deg 100% 27%) 11%,
+  hsl(331deg 88% 36%) 22%,
+  hsl(344deg 68% 47%) 33%,
+  hsl(358deg 75% 58%) 44%,
+  hsl(12deg 93% 60%) 56%,
+  hsl(25deg 100% 59%) 67%,
+  hsl(37deg 100% 54%) 78%,
+  hsl(47deg 100% 50%) 89%,
+  hsl(55deg 100% 50%) 100%
+);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 25px solid fuchsia;
+    border-radius: 50px;  
+    box-shadow: 0 0 20px black;  
+}
+
+header{
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px;
+    color: rgb(195, 23, 201);
+    text-shadow: 0 0 3px rgb(97, 1, 97);
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+
+section{
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    color:white;
+    margin-top: 20px;
+    border-bottom:  5px solid rgb(11, 37, 203);
+}
+
+h2{
+    padding: 10px;
+    text-align: center;
+    font-size: 1.75rem;
+    text-shadow: 0 0 5px black;
+    text-decoration: underline limegreen;
+}
+
+a{
+    text-decoration: none;
+}
+
+section a{
+    display: inline-block;
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+
+section a:hover{
+    color:rgb(14, 221, 7);
+    text-decoration: underline rgb(11, 37, 203);
+}
+
+section p{
+    text-align: left;
+    text-shadow: 0 0 5px black;
+    padding: 15px;
+    line-height: 2;
+}
+
+footer{
+    padding:20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.foot-links{
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer a{
+    padding: 10px;
+    color: rgb(14, 221, 7);
+    text-shadow: 1px 1px black;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: rgb(233, 214, 4);
+}
+
+
+@media  screen and (max-width: 768px) {
+
+    header{
+        font-size: 1.25rem;
+    }
+    
+}
