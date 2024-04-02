@@ -140,5 +140,9 @@ footer a:hover{
     header{
         font-size: 1.25rem;
     }
+
+    section a{
+        color:rgb(11, 37, 203);
+    }
     
 }
