@@ -172,7 +172,7 @@
     padding: 1rem 0;
 }
 
-.button-nav-center {
+.button-center {
     justify-content: center;
 }
 
@@ -185,28 +185,57 @@
     margin: 10px;
     text-decoration: none;
     border-radius: 5px;
-    border: 3px solid hsl(45, 98%, 44%);
+    border: 3px solid rgb(5, 51, 179);
     font-weight: bolder;
 }
 
+.button-nav-warning {
+    color: rgb(246, 4, 4);
+    background: rgb(242, 241, 241);
+}
+
+.button-nav-success {
+    color: rgb(9, 137, 9);
+    background: rgb(242, 241, 241);
+}
+
 .button-nav-primary {
-    color: White;
-    background: rgb(5, 51, 179)
+    color: rgb(5, 51, 179);
+    background: rgb(242, 241, 241);
+}
+
+.button-nav-primary-large{
+    font-size: 1.8rem;
+}
+
+.button-nav-primary-small {
+    font-size: 1rem;
 }
 
 .button-nav-primary:hover {
-    border: 3px inset black;
-    background: white;
-    color: black;
-    transform: rotate(15deg);
+    box-shadow: 1px 1px 20px rgb(10, 103, 234);
+    color: rgb(0, 106, 255);
+    text-shadow: 1px 1px 5px rgb(2, 154, 249);
 }
 
-.button-nav-primary:active {
+.button-nav-warning:hover {
+    box-shadow: 1px 1px 20px rgb(246, 4, 4);
+    color: rgb(246, 4, 4);
+    text-shadow: 1px 1px 5px rgb(246, 4, 4);
+}
+
+.button-nav-success:hover {
+    box-shadow: 1px 1px 20px rgb(9, 137, 9);
+    color: rgb(9, 137, 9);
+    text-shadow: 1px 1px 5px rgb(9, 137, 9);
+}
+
+.button-nav:active {
     text-transform: uppercase;
+    text-shadow: none;
 }
  
- /**
-  * background gradient
+ /**  * background gradient
   * small gradient on top
   * first color is 0% from the top
   * second color is 5% from the top
@@ -260,11 +289,11 @@
  }
 
   /* Creating the buttons for assignment 03 first set of buttons*/
-.button-1-right {
+.button-right {
     justify-content: flex-end;
 }
 
-.button-1-link{
+.button-amFam-link{
     font-size: 1.2em;
     line-height: 2;
     margin: 10px;
@@ -276,7 +305,7 @@
     font-weight: bolder;
 }
 
-.button-1-link-primary{
+.button-amFam-link-primary{
     font-size: 1.4rem;
     background-image: linear-gradient(
         0deg,
@@ -295,22 +324,22 @@
     text-shadow: 2px 2px hsla(206, 97%, 23%, 0.559);
 }
 
-.button-1-link-primary-large{
+.button-amFam-link-primary-large{
     font-size: 2rem;
 }
 
-.button-1-link-primary-small{
+.button-amFam-link-primary-small{
     font-size: 1rem;
 }
 
 /* button hover effect */
-.button-1-link-primary:hover{
+.button-amFam-link-primary:hover{
     box-shadow: 0px 0px 5px hsl(236, 86%, 54%);
     background: hsl(234deg 99% 27%)
 }
 
 /* button press effect */
-.button-1-link-primary:active{
+.button-amFam-link-primary:active{
     animation: press 0.2s 1 linear;
 }
 
@@ -328,38 +357,54 @@
 
 /* Second set of buttons for assignment03 */
 
-.button-2-center{
+.button-freddy-center{
     justify-content: center;
 }
 
-.button-2-link {
+.button-freddy {
     font-size: 1.2em;
     line-height: 2;
     margin: 10px;
     padding: 0 1em;
     text-decoration: none;
-    border: 3px dashed rgb(33, 18, 113);
     border-radius: 5px;
     font-weight: bolder;
 }
 
-.button-2-link-primary {
+.button-freddy-primary {
     font-size: 1.5rem;
     background: antiquewhite;
     color: red;
     text-shadow: 1px 1px black;
+    border: 3px dashed rgb(33, 18, 113);
 }
 
-.button-2-link-primary-large {
+.button-freddy-success {
+    font-size: 1.5rem;
+    background: green;
+    color: antiquewhite;
+    text-shadow: 1px 1px black;
+    border: 3px dashed rgb(255, 255, 255);
+}
+
+.button-freddy-warning {
+    font-size: 1.5rem;
+    background: red;
+    color: white;
+    text-shadow: 1px 1px black;
+    border: 3px dashed rgb(255, 255, 255);
+}
+
+.button-freddy-primary-large {
     font-size: 2rem;
 }
 
-.button-2-link-primary-small {
+.button-freddy-primary-small {
     font-size: 1.2rem;
 }
 
 /* button 2 hover effets */
-.button-2-link-primary:hover {
+.button-freddy-primary:hover {
     border: 3px solid rgb(33, 18, 113);
     box-shadow: 3px 3px 3px red;
     background: black;
@@ -367,19 +412,47 @@
     text-shadow: 0 0 5px white;
 }
 
-/* button 2 active effects */
-.button-2-link-primary:active {
-    transform: scale(0.8);
+.button-freddy-warning:hover {
+    border: 3px solid rgb(194, 11, 11);
+    box-shadow: 3px 3px 3px rgb(222, 12, 12);
+    background: rgb(243, 16, 16);
+    color: white;
+    text-shadow: 0 0 5px rgb(6, 5, 5);
 }
+
+.button-freddy-success:hover {
+    border: 3px solid rgb(78, 237, 19);
+    box-shadow: 3px 3px 3px rgb(82, 238, 9);
+    background: rgb(140, 239, 10);
+    color: rgb(7, 6, 6);
+    text-shadow: 0 0 5px white;
+}
+
+/* button 2 active effects */
+.button-freddy-primary:active {
+    transform: scale(0.9);
+    box-shadow: none;
+}
+
+.button-freddy-success:active {
+    transform: scale(0.9);
+    box-shadow: none;
+}
+
+.button-freddy-warning:active {
+    transform: scale(0.9);
+    box-shadow: none;
+}
+
 
 
 
 /* Third set of buttons for assignment03 */
-.button-3-left{
+.button-brewcrew-left{
     justify-content: flex-start;
 }
 
-.button-3-link {
+.button-brewcrew-link {
     font-size: 1.2em;
     line-height: 2;
     margin: 10px;
@@ -389,7 +462,7 @@
     border-radius: 5px;
 }
 
-.button-3-link-primary {
+.button-brewcrew-link-primary {
     font-size: 1.5rem;
     color: white;
     text-shadow: 0 0 8px white;
@@ -409,16 +482,16 @@
     );
 }
 
-.button-3-link-primary-large {
+.button-brewcrew-link-primary-large {
     font-size: 2rem;
 }
 
-.button-3-link-primary-small {
+.button-brewcrew-link-primary-small {
     font-size: 1rem;
 }
 
 /* button 3 hover effects */
-.button-3-link-primary:hover {
+.button-brewcrew-link-primary:hover {
     background-image: linear-gradient(
     0deg,
     hsl(248deg 98% 20%) 0%,
@@ -439,7 +512,7 @@
 }
 
 /* button 3 active effects */
-.button-3-link-primary:active {
+.button-brewcrew-link-primary:active {
     transform: translateY(-2px);
     box-shadow: none;
 }
