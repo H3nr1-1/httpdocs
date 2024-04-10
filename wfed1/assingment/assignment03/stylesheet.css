@@ -403,7 +403,7 @@
     font-size: 1.2rem;
 }
 
-/* button 2 hover effets */
+/* button 2 hover effects */
 .button-freddy-primary:hover {
     border: 3px solid rgb(33, 18, 113);
     box-shadow: 3px 3px 3px red;
@@ -416,8 +416,8 @@
     border: 3px solid rgb(194, 11, 11);
     box-shadow: 3px 3px 3px rgb(222, 12, 12);
     background: rgb(243, 16, 16);
-    color: white;
-    text-shadow: 0 0 5px rgb(6, 5, 5);
+    color: rgb(7, 6, 6);
+    text-shadow: 0 0 5px rgb(7, 6, 6);
 }
 
 .button-freddy-success:hover {
