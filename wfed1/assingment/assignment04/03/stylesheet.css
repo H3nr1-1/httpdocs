@@ -252,17 +252,17 @@
  * scale will make middle rectangle disappear
  */
 .nav-main-menu-toggle[aria-expanded="true"] rect:nth-child(1) {
-    rotate: 3.25turn;
-    translate: 10px 10px;
+    rotate: 3.3turn;
+    translate: -5px 10px;
 }
 
 .nav-main-menu-toggle[aria-expanded="true"] rect:nth-child(2) {
-    rotate: 3turn;
+    rotate: 6turn;
 }
 
 .nav-main-menu-toggle[aria-expanded="true"] rect:nth-child(3) {
-    rotate: -3.25turn;
-    translate: -10px -10px;
+    rotate: 3.7turn;
+    translate: 5px -10px;
 }
 
 /* END - .nav-main-menu-toggle */
