@@ -174,7 +174,7 @@
     margin-left: 20px;
     padding: 5px;
     text-decoration: none;
-    border: 3px solid rgb(32, 59, 180);
+    border: 3px solid rgb(248, 235, 63);
     border-radius: 5px;
     max-width: 225px;
     cursor: grab;
@@ -183,8 +183,8 @@
 /* When a nav link is clicked on it will be highlighted!*/
 .active {
     background: rgb(27, 23, 16);
-    color: black;
     text-shadow: 1px 1px rgb(27, 55, 139);
+    box-shadow: 0px 0px 20px rgb(160, 138, 9);
     font-size: 1.4em;
     font-weight: bold;
 }
@@ -237,7 +237,7 @@
 }
 
 .nav-main-menu-toggle rect:nth-child(2) {
-    transition: all 2.25s linear;
+    transition: all 2.25s ease;
     transform-origin: center;
 }
 
@@ -296,22 +296,20 @@
  */
 #nav-main-menu {
     transform: translateX(100%);
-    transition: all 1s ease-in-out;
+    transition: all 1.5s ease-in-out;
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background: hsla(218, 62%, 50%, 0.7);
-    backdrop-filter: blur(5px);
+    background: rgb(2, 38, 103);
     margin: 0;
-    margin-top: 0px;
+    margin-top: 0;
     padding: 0;
+    gap: 15px;
     list-style: none;
     display: flex;
     align-items: center;
     visibility: hidden;
     flex-direction: column;
-    box-shadow: 0px 0px 10px black;
-    clip-path: inset(0px 0px -10px 0px);
 }
 
 /**
@@ -328,7 +326,7 @@
 #nav-main-menu:not([hidden]) {
     visibility: visible;
     transform: translateX(0);
-    transition: all 1.s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 /**
@@ -359,8 +357,10 @@
 #nav-main-menu li a:hover,
 #nav-main-menu li a:focus {
     background: hsla(52, 71%, 49%, 0.7);
-    box-shadow: 0px 2px 10px rgb(2, 38, 103);
+    border: 3px solid rgb(2, 38, 103);
+    box-shadow: 0px 0px 40px hsla(52, 71%, 49%, 0.7);
     color: rgb(2, 38, 103);
+    text-transform: uppercase;
     text-shadow: none;
     font-weight: 900;
 }

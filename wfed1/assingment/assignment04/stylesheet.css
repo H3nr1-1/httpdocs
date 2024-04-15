@@ -183,8 +183,8 @@
 /* When a nav link is clicked on it will be highlighted!*/
 .active {
     background: antiquewhite;
-    color: black;
     text-shadow: 1px 1px rgb(27, 55, 139);
+    box-shadow: 0px 0px 20px rgb(27, 55, 139);
     font-size: 1.4em;
     font-weight: bold;
 }
@@ -235,7 +235,7 @@
 }
 
 .nav-main-menu-toggle rect:nth-child(2) {
-    transition: all 2.25s linear;
+    transition: all 2.25s ease-in-out;
     transform-origin: center;
 }
 
