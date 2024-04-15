@@ -177,6 +177,7 @@
     border: 3px solid rgb(27, 55, 139);
     border-radius: 5px;
     max-width: 225px;
+    cursor: grab;
 }
 
 /* When a nav link is clicked on it will be highlighted!*/
@@ -189,11 +190,11 @@
 }
 
 .nav-main {
-    position: fixed;
+    position: sticky;
+    margin-left: 20px;
     top: 10px;
     left: 20px;
     line-height: 0;
-    
 }
 
 /**
@@ -208,7 +209,7 @@
     border: 3px solid rgb(27, 55, 139);
     border-radius: 10px;
     box-shadow: 0 0 15px rgb(24, 24, 18);
-    cursor: pointer;
+    cursor: grab;
     padding: 0;
     line-height: 0;
 }
@@ -257,7 +258,7 @@
 }
 
 .nav-main-menu-toggle[aria-expanded="true"] rect:nth-child(2) {
-    rotate: 6turn;
+    rotate: 10turn;
 }
 
 .nav-main-menu-toggle[aria-expanded="true"] rect:nth-child(3) {
@@ -291,15 +292,16 @@
  * - negative pixels will extend shadow beyond box edge
  */
 #nav-main-menu {
-    transform: translateX(-100%);
+    transform: translateY(-100%);
     transition: all 1s ease-in-out;
     position: absolute;
-    width: 45vw;
+    width: 60vw;
     height: 100vh;
     background: hsla(52, 96%, 41%, 0.7);
     backdrop-filter: blur(5px);
     margin: 0;
     margin-top: 0px;
+    margin-left:-20px;
     padding: 0;
     list-style: none;
     display: flex;
@@ -322,8 +324,10 @@
  */
 #nav-main-menu:not([hidden]) {
     visibility: visible;
-    transform: translateX(0);
+    transform: translateY(0);
     transition: all 1.8s ease-in-out;
+    border-top: 5px solid rgb(27, 55, 139);
+    border-right: 5px solid rgb(27, 55, 139);
 }
 
 /**
