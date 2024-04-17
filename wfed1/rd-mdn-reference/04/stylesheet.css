@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -8,6 +8,7 @@
 
 body {
     background: rgb(180, 221, 235);
+    font-family: "Merriweather", serif;
 }
 
 .wrapper {
@@ -21,19 +22,21 @@ body {
 }
 
 header {
-    font-size: 2rem;
-    text-decoration: underline;
-    text-align: center;
     border-bottom: 3px solid black;
     padding: 45px;
     box-shadow: 0px 2px 10px black;
     border-radius: 0px 0px 20px 20px;
 }
 
+h1 {
+    font-size: 2rem;
+    text-decoration: underline;
+    text-align: center;
+}
+
 section {
     display: block;
     margin: 25px;
-    line-height: 1.2em;
     padding: 15px;
     border-bottom: 3px solid black;
     box-shadow: -2px -2px 2px black;
@@ -41,6 +44,31 @@ section {
     padding: 30px;
 }
 
+h2 {
+    padding: 10px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.link {
+    margin-left: 4em;
+    color: blue;
+    font-size: 1.1em;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.link:hover {
+    color: rgb(161, 0, 0);
+    text-shadow: 1px 1px black;
+    text-decoration: underline;
+}
+
+p {
+    margin: 10px;
+    line-height: 2em;
+    text-shadow: 1px 1px rgb(244, 240, 235);
+}
 
 a {
     text-decoration: none;
@@ -48,9 +76,8 @@ a {
 }
 
 footer {
-    padding:20px;
+    padding:40px;
     margin-top: 15px;
-    margin-bottom: 10px;
     border-top: 3px solid black;
     box-shadow: 0px -2px  10px black;
     border-radius: 20px 20px 0px 0px;
@@ -73,4 +100,18 @@ footer a:hover {
     text-decoration: underline;
     color: rgb(160, 235, 141);
     background: black;
+}
+
+
+@media screen and (max-width:768px){
+
+    h1{
+        font-size: 2em;
+    }
+
+    .link {
+        font-size: 0.9em;
+        margin-left: 10px;
+    }
+
 }
