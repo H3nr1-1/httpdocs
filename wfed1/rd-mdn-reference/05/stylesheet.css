@@ -39,7 +39,7 @@ h1 {
 }
 
 section {
-    display: column;
+    display: block;
     margin: 35px;
     margin-top: 30px;
     padding: 20px;
@@ -55,6 +55,7 @@ section h2 {
 h4 {
     margin-top: 5px;
     text-align: center;
+    padding: 10px;
 }
 
 section h2 p {
