@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 5 - Forms</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/wfed1/assingment/assignment05/02/style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Milwaukee Brewers<sup>&reg;</sup></h1>
+        </header>
+
+        <nav class="nav-main">
+            <button class="nav-main-menu-toggle" aria-label="Open Menu" aria-controls="nav-main-menu" aria-expanded="false">
+                <svg viewBox="0 0 48 48" width="48" height="48">
+                    <rect x="6" y="12" width="36" height="4" rx="2"></rect>
+                    <rect x="12" y="22" width="24" height="4" rx="2"></rect>
+                    <rect x="6" y="32" width="36" height="4" rx="2"></rect>
+                </svg>
+            </button>
+            <ul id="nav-main-menu" hidden>
+                <li><a class="hamburgerNav" href="/wfed1/assingment/assignment05/index.html">Home</a></li>
+                <li><a class="hamburgerNav active" href="/wfed1/assingment/assignment05/02/subscribe.html">Subscribe</a></li>
+                <li><a class="hamburgerNav" href="/wfed1/assingment/assignment05/03/about.html">About Us</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <div class="call-out">
+                <h2 class="call-out-heading">Become a Brewer Insider!</h2>
+                <p class="call-out-intro">Receive the latest news, offers, and more - all delivered FREE to your inbox, wherever you are!</p>
+                <form class="subscribe-newsletter" action="https://buchholz.bitweb1.nwtc.edu/api/wfed1/subscribe-newsletter/" method="post">
+                    <fieldset>
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" placeholder="Enter your email" required>
+                        <label class="subscribe-newsletter-message">No spam — we won't sell your email.</label>
+                    </fieldset>
+                    <fieldset>
+                        <input type="hidden" name="message" value="	&#9918; You are now subscribed!">
+                        <input type="hidden" name="delay" value="8">
+                        <input type="submit" name="submit" value="Subscribe">
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <a href="/wfed1/index.html">&copy; 2024 Chris Henrickson</a>
+            <a href="javascript:void(location='https://validator.w3.org/nu/?doc='+escape(location))">
+                HTML</a>
+            <a href="javascript:void(location='https://jigsaw.w3.org/css-validator/validator?uri='+escape(location))">
+                CSS</a>
+        </footer>
+        
+    </div>
+    <!-- // container wrapper -->
+    <script src="https://buchholz.bitweb1.nwtc.edu/api/wfed1/subscribe-newsletter/subscribe-newsletter-min.js"></script>
+</body>
+
+</html>
