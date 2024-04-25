@@ -295,7 +295,7 @@
     transform: translateX(-100%);
     transition: all 1s ease-in-out;
     position: absolute;
-    width: 45vw;
+    width: 60vw;
     height: 100vh;
     background: hsla(52, 96%, 41%, 0.7);
     backdrop-filter: blur(5px);
@@ -993,7 +993,7 @@
 
      /* NEWS LETTERS  for large screen */
 
-     .callout {
+     .call-out {
         padding: 80px;
     }
     .subscribe-newsletter {

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+:root {
+    --main-color: rgb(181, 239, 139);
+    --main-header: rgb(233, 64, 64);
+    --main-section: rgb(162, 146, 124);
+    --section-shader: rgb(108, 96, 96);
+    --main-footer: rgb(123, 95, 58);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(12, 101, 45);
+    font-family: "PT Serif", serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1000px;
+    background: var(--main-color);
+    color: black;
+    border-left: 4px solid;
+    border-right: 4px solid;
+}
+
+header{
+    padding: 30px;
+    margin-top: 0;
+    background: var(--main-header);
+    border-bottom: 3px solid;
+    box-shadow: 0 0 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    margin: 25px;
+    border-radius: 20px;
+    background: var(--main-section);
+    box-shadow: 4px 4px 15px var(--main-header);
+}
+
+section h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+ a {
+    text-decoration: none;
+    color: white;
+}
+
+.source {
+    font-size: 1.2em;
+    margin-left: 4.5em;
+}
+
+.source:hover {
+    color: rgb(255, 0, 195);
+    text-shadow: 1px 1px black;
+    cursor: grab;
+}
+
+footer {
+    padding: 40px;
+    margin-top: 15px;
+    border-top: 3px solid;
+    box-shadow: 0 0 20px;
+    background: var(--main-footer);
+}
+
+.foot-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+footer a {
+    border: 2px solid blue;
+    background: rgb(171, 30, 8);
+    border-radius: 10px;
+    padding: 5px;
+    min-width: 100px;
+    text-align: center;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: rgb(252, 252, 3);
+    background: rgb(6, 30, 127);
+}
+
+

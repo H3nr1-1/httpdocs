@@ -298,7 +298,7 @@
     transform: translateX(-100%);
     transition: all 1s ease-in-out;
     position: absolute;
-    width: 45vw;
+    width: 60vw;
     height: 100vh;
     background: hsla(52, 96%, 41%, 0.7);
     backdrop-filter: blur(5px);
@@ -388,283 +388,11 @@
          )
          #fff;
  }
- 
- /**
-  * margin 24px on top and bottom
-  * zero on right and left
-  * 6px on bottom (override the 24px)
-  */
- h2 {
-     margin: 12px 20px ;
- }
- 
- /**
-  * use larger line-height for improved readability
-  * set maximum width to 60ch (60 characters) for improved readability
-  */
- p {
-     margin: 12px 0;
-     line-height: 1.4;
-     max-width: 85ch;
- }
- 
- /**
-  * Responsive Images
-  * set width to 100%
-  * images will scale to fit the container
-  * percentage is based on the width of the containing block (parent element)
-  */
- img {
-     width: 100%;
-     border-radius: 10px;
- }
-
-  /* Creating the buttons for assignment 03 first set of buttons*/
-  .button {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 1rem 0;
-    padding: 1rem 0;
-}
-
-.button-center {
-    justify-content: center;
-}
-
-.button-right {
-    justify-content: flex-end;
-}
-
-.button-amFam-link{
-    font-size: 1.2em;
-    line-height: 2;
-    margin: 10px;
-    padding: 0 1em;
-    text-decoration: none;
-    border-radius: 10px;
-    border: 1px solid hsl(236, 86%, 54%);
-    box-shadow: 0px 3px 10px hsl(236, 86%, 54%);
-    font-weight: bolder;
-}
-
-.button-amFam-link-primary{
-    font-size: 1.4rem;
-    background-image: linear-gradient(
-        0deg,
-        hsl(234deg 99% 27%) 29%,
-        hsl(229deg 100% 29%) 69%,
-        hsl(225deg 100% 30%) 79%,
-        hsl(223deg 100% 31%) 84%,
-        hsl(220deg 100% 32%) 87%,
-        hsl(218deg 100% 33%) 89%,
-        hsl(216deg 100% 34%) 91%,
-        hsl(214deg 100% 35%) 93%,
-        hsl(212deg 100% 36%) 96%,
-        hsl(211deg 95% 38%) 100%
-      );
-    color:rgb(248, 235, 63);
-    text-shadow: 2px 2px hsla(206, 97%, 23%, 0.559);
-}
-
-.button-amFam-link-primary-large{
-    font-size: 2rem;
-}
-
-.button-amFam-link-primary-small{
-    font-size: 1rem;
-}
-
-/* button hover effect */
-.button-amFam-link-primary:hover{
-    box-shadow: 0px 0px 5px hsl(236, 86%, 54%);
-    background: hsl(234deg 99% 27%)
-}
-
-/* button press effect */
-.button-amFam-link-primary:active{
-    animation: press 0.2s 1 linear;
-}
-
-@keyframes press {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(0.92);
-    }
-    to {
-        transform: scale(1);
-    }
-}
-
-/* Second set of buttons for assignment03 */
-
-.button-freddy-center{
-    justify-content: center;
-}
-
-.button-freddy {
-    font-size: 1.2em;
-    line-height: 2;
-    margin: 10px;
-    padding: 0 1em;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bolder;
-}
-
-.button-freddy-primary {
-    font-size: 1.5rem;
-    background: antiquewhite;
-    color: red;
-    text-shadow: 1px 1px black;
-    border: 3px dashed rgb(33, 18, 113);
-}
-
-.button-freddy-success {
-    font-size: 1.5rem;
-    background: green;
-    color: antiquewhite;
-    text-shadow: 1px 1px black;
-    border: 3px dashed rgb(255, 255, 255);
-}
-
-.button-freddy-warning {
-    font-size: 1.5rem;
-    background: red;
-    color: white;
-    text-shadow: 1px 1px black;
-    border: 3px dashed rgb(255, 255, 255);
-}
-
-.button-freddy-primary-large {
-    font-size: 2rem;
-}
-
-.button-freddy-primary-small {
-    font-size: 1.2rem;
-}
-
-/* button 2 hover effects */
-.button-freddy-primary:hover {
-    border: 3px solid rgb(33, 18, 113);
-    box-shadow: 3px 3px 3px red;
-    background: black;
-    color: white;
-    text-shadow: 0 0 5px white;
-}
-
-.button-freddy-warning:hover {
-    border: 3px solid rgb(194, 11, 11);
-    box-shadow: 3px 3px 3px rgb(222, 12, 12);
-    background: rgb(243, 16, 16);
-    color: rgb(7, 6, 6);
-    text-shadow: 0 0 5px rgb(7, 6, 6);
-}
-
-.button-freddy-success:hover {
-    border: 3px solid rgb(78, 237, 19);
-    box-shadow: 3px 3px 3px rgb(82, 238, 9);
-    background: rgb(140, 239, 10);
-    color: rgb(7, 6, 6);
-    text-shadow: 0 0 5px white;
-}
-
-/* button 2 active effects */
-.button-freddy-primary:active {
-    transform: scale(0.9);
-    box-shadow: none;
-}
-
-.button-freddy-success:active {
-    transform: scale(0.9);
-    box-shadow: none;
-}
-
-.button-freddy-warning:active {
-    transform: scale(0.9);
-    box-shadow: none;
-}
-
-
-
-
-/* Third set of buttons for assignment03 */
-.button-brewcrew-left{
-    justify-content: flex-start;
-}
-
-.button-brewcrew-link {
-    font-size: 1.2em;
-    line-height: 2;
-    margin: 10px;
-    padding: 0 1em;
-    text-decoration: none;
-    border: 3px solid hsl(240deg 99% 70%);
-    border-radius: 5px;
-}
-
-.button-brewcrew-link-primary {
-    font-size: 1.5rem;
-    color: white;
-    text-shadow: 0 0 8px white;
-    background-image: linear-gradient(
-        0deg,
-        hsl(240deg 99% 70%) 0%,
-        hsl(242deg 67% 59%) 1%,
-        hsl(245deg 52% 49%) 3%,
-        hsl(247deg 60% 39%) 8%,
-        hsl(248deg 73% 29%) 20%,
-        hsl(248deg 98% 20%) 51%,
-        hsl(248deg 73% 29%) 80%,
-        hsl(247deg 60% 39%) 92%,
-        hsl(245deg 52% 49%) 97%,
-        hsl(242deg 67% 59%) 99%,
-        hsl(240deg 99% 70%) 100%
-    );
-}
-
-.button-brewcrew-link-primary-large {
-    font-size: 2rem;
-}
-
-.button-brewcrew-link-primary-small {
-    font-size: 1rem;
-}
-
-/* button 3 hover effects */
-.button-brewcrew-link-primary:hover {
-    background-image: linear-gradient(
-    0deg,
-    hsl(248deg 98% 20%) 0%,
-    hsl(248deg 73% 29%) 1%,
-    hsl(247deg 60% 39%) 3%,
-    hsl(245deg 52% 49%) 8%,
-    hsl(242deg 67% 59%) 20%,
-    hsl(240deg 99% 70%) 50%,
-    hsl(242deg 67% 59%) 80%,
-    hsl(245deg 52% 49%) 92%,
-    hsl(247deg 60% 39%) 97%,
-    hsl(248deg 73% 29%) 99%,
-    hsl(248deg 98% 20%) 100%
-    );
-    border: 3px inset black;
-    color: rgb(7, 17, 125);
-    box-shadow: 2px 2px 10px black;
-}
-
-/* button 3 active effects */
-.button-brewcrew-link-primary:active {
-    transform: translateY(-2px);
-    box-shadow: none;
-}
 
 /**** Subscribe to the BREWERS news letter ASSIGNMENT05 ****/
 .call-out {
     font-family: "Sedan", serif;
     background: url(images/brewer_glove.webp) no-repeat center / cover;
-    padding: 15px;
     border-radius: 10px;
     box-shadow: 4px 4px 10px royalblue;
 }
@@ -774,7 +502,7 @@
 
 .subscribe-newsletter input[type=email]:focus {
     outline: none;
-    box-shadow: outset 0 0 0 2px var(--color-primary-light);
+    box-shadow: 0 0 0 2px var(--color-primary-light);
 }
 
 .subscribe-newsletter input::placeholder {
@@ -1010,7 +738,7 @@
 
      /* NEWS LETTERS  for large screen */
 
-     .callout {
+    .call-out {
         padding: 80px;
     }
     .subscribe-newsletter {
