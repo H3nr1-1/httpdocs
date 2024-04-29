@@ -45,7 +45,7 @@ header h1 {
 section {
     padding: 20px;
     margin: 25px;
-    border-radius: 20px;
+    border-radius: 5px;
     background: var(--main-section);
     box-shadow: 4px 4px 15px var(--main-header);
 }
@@ -62,13 +62,25 @@ section h2 {
 
 .source {
     font-size: 1.2em;
+    text-shadow: 1px 1px black;
     margin-left: 4.5em;
 }
 
 .source:hover {
     color: rgb(255, 0, 195);
     text-shadow: 1px 1px black;
+    text-transform: uppercase;
     cursor: grab;
+}
+
+p {
+    margin-top: 10px;
+    line-height: 2em;
+    padding: 10px;
+}
+
+ol li {
+    margin-left: 5em;
 }
 
 footer {

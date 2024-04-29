@@ -16,25 +16,36 @@
 
             <section>
                 <h2>Flex Research Source #1</h2>
-                <a class="source" href="">Source Link</a>
-                <p></p>
+                <a class="source" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox">MDN Web Docs</a>
+                <p>There are 2 main axis of the flex layout.  These axis are defined by their flex-direction.  The two axis are 'row' and 'column'.  'Row' is from left to right and 'column' is from top to bottom.  If we use the reverse property, it would be the opposite.  When setting a 'display' property to 'flex' you are creating a flex container.  When this happens, the direct children of the container become flex items.  We can control how these items are displayed by using inline or block.  If the items are to large to display all on one line we can use a property called 'flex-wrap'.  When we pair 'flex-wrap' with 'wrap', it will take the extra content that was to big for the line and move it to the next line.  In CSS the property would look like 'flex-wrap: wrap'.  If it is set to 'nowrap' the content will shrink down to all fit on the same line.  If the items are not able to shrink small enough, there would be an overflow and could cause problems with the page.  
+                </p>
             </section>
             
             <section>
                 <h2>Flex Research Source #2</h2>
-                <a class="source" href="">Source Link</a>
-                <p></p>
+                <a class="source" href="https://www.w3schools.com/css/css3_flexbox_container.asp">W3Schools</a>
+                <p>Using the 'justify-content' property allows for aligning the content in the flex container.  There are  5 main values:</p>
+                <ol>
+                    <li>flex-start</li>
+                    <li>flex-end</li>
+                    <li>center</li>
+                    <li>space-around</li>
+                    <li>space-between</li>
+                </ol>
+                <p>Flex-start is the default and aligns the content at the beginning of the container or left edge.  Center aligns the content in the center of the container.  Flex-end aligns the content at the end of the container or the right edge.  Space-around aligns content with equal margin around the content within the container and space-between starts the first and last piece of content at the start and end of the row with the middle piece of content in the center and equal margin between.</p>
+                <p>The align-items property is used to align items within a height of a flex container.  In this case, flex-start and flex-end mean different things than they did with justify-content.  Now flex-start means the top of the flex container and flex-end refers to the bottom.  Center is still the same, but on the Y axis.  There are also two new values that are brought into play.  Stretch and baseline.  Stretch is used to stretch the content to the full height of the container.  Baseline puts all content on the middle of the container no matter the size of the content to be aligned.  The justify-content and align-items properties can be used at the same time in CSS.</p>
             </section>
 
             <section>
                 <h2>Flex Research Source #3</h2>
-                <a class="source" href="">Source Link</a>
-                <p></p>
+                <a class="source" href="https://www.freecodecamp.org/news/the-css-flexbox-handbook/#the-flex-grow-property">Free Code Camp</a>
+                <p>The 'flex-grow' property helps items in a flex container to expand when there is extra space.  If you set it to 0.5 for one item, it gets half of the leftover space, if you set it to 1 or more, it will get all of the left over space compared to the rest of the items in the container.  'Flex-shrink' is the opposite, it makes items shrink if there isn't enough space in the container.   A higher value means an item shrinks more.  Setting it to 0 prevents an item from shrinking at all.  'Flex-basis' set the starting size of an item, and it adjusts based on the container's direction.  The 'flex' shorthand combines these properties into  1 line.  An example would be 'flex: 1 0 auto' (default).  The first number is the grow, the second number is the shrink, and the third is the basis.  The order of the values is very important!</p>
             </section>
 
             <section>
                 <h2>Summary of Documentation</h2>
-                <p></p>
+                <p>Flexbox, a flexible layout is CSS, operates along two main axes,'row' and 'column', determined by the 'flex-direction' property.  'Row' runs from left to right, while 'column' runs from top to bottom.  Setting 'display: flex' creates a flex container, converting its direct children into flex items.  These items can be displayed inline or block.  If items are too large to fit on one line, 'flex-wrap' with 'wrap' moves the extra content to the next line; with 'nowrap' items shrink to fit on one line, risking overflow.  'Justify-content' aligns content horizontally, with options like 'flex-start', 'flex-end', 'center', 'space-around', and 'space-between'.  'Align-items' vertically aligns items, with options such as 'stretch' and 'baseline'.  'Flex-grow' makes items expand in extra space, while 'flex-shrink' causes them to shrink if needed; a higher value shrinks more, with 0 preventing shrinking all together.  'Flex-basis' sets the initial size of an item, adjusting based on the container's directions.  The 'flex' shorthand combines these properties, like 'flex: 1 0 auto'.  Flex is a very useful tool for mobile friendly development and can save a ton of time from writing a bunch of media queries.  
+                </p>
             </section>
             
 			<footer class="foot-links">
