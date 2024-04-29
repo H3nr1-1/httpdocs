@@ -1,0 +1,350 @@
+/**
+ * set the box-sizing property to border-box
+ * all elements will include padding and border in the width and height
+ * the star selector is a universal selector - selects all elements
+ * the before and after pseudo-elements are included
+ * now the width property value will be subtracted to include padding and border
+ * default model is content-box - padding and border are added to the width and height
+ * works best for most designs 
+ * - however if width is small and padding is large overflow can occur
+ */
+ *,
+ *:before,
+ *:after {
+     box-sizing: border-box;
+ }
+ 
+ /**
+  * set the min-height to 100dvh
+  * dvh is the dynamic viewport height
+  * it will adjust based on the changing viewport height
+  * if the browser adds controls or the viewport height changes
+  * the min-height will adjust to the new height
+  */
+ html {
+     font-family: sans-serif;
+     min-height: 100dvh;
+ }
+ 
+ /**
+  * multiple backgrounds
+  * background is the shorthand property
+  * url() is the background-image property
+  * repeat-x is the background-repeat property
+  * fixed is the background-attachment property
+  * top image and the gradient will be fixed to the viewport
+  * page content will scroll and the background will remain fixed
+  */
+ 
+ /* prettier-ignore */
+ body {
+     margin: 0;
+     min-height: 100dvh;
+     background: 
+         url(images/champs.webp) no-repeat top 0 right 25px fixed, 
+         url(images/brewer_logo.webp) repeat-x left bottom 25px / 15em, 
+         fixed
+         linear-gradient(
+             to bottom, 
+             rgb(216, 195, 7) 2%, 
+             rgb(2, 38, 103) 64%
+             )
+         #000;
+ }
+ 
+ /**
+  * create a grid container
+  * no columns or rows are defined
+  * the grid will automatically create columns and rows
+  * based on the content
+  * max-width is 800px
+  * div is a block-level element
+  * it will try to take up the full width of the container
+  * never larger than 800px
+  */
+ 
+ .wrapper {
+     display: grid;
+     max-width: 800px;
+     border: 2px solid rgb(2, 38, 103);
+     border-radius: 10px;
+     background: rgb(216, 195, 7);
+     margin-top: 10px;
+     margin-bottom: 10px;
+ }
+ 
+ /**
+  * display flex - create a flex container
+  * flex direction is row (left to right)
+  * all elements will shrink to the minimum size of the content
+  * and flow from left to right
+  * multiple background images (gradients behave like images)
+  * background is the shorthand property
+  * url() is the background-image property
+  * no-repeat is the background-repeat property
+  * top 0px right 0px is the background-position property (x, y)
+  * the additional value after the keyword is the offset
+  * place the image in the top right corner
+  * then move it 0px down and 0px left
+  * positive values move in towards the center of the element
+  * negative values move out away from the element
+  * / 50px 50px is the background-size property (width, height)
+  * keyword cover is the background-size property
+  * cover will scale the image to cover the entire container
+  * contain will scale the image to fit inside the container
+  * cover is used most often
+  * background color must always be last
+  * a stacking order is created
+  * first background image/gradient is on top
+  * last background image/gradient is on the bottom
+  */
+ /* prettier-ignore */
+ header {
+     display: flex;
+     border-radius: 10px;
+     border: 2px solid gray;
+     margin: 20px;
+     background: 
+        url(images/openingDay.webp) no-repeat top 100px right 20px / 75px 75px, 
+        url(images/AmFamField.webp) no-repeat center center / cover,
+        linear-gradient(
+             to bottom, 
+             rgb(216, 195, 7), 
+             rgb(2, 38, 103)
+         )
+         #3427f3;
+     box-shadow: inset 0 2px 4px rgb(216, 195, 7);
+ }
+ 
+ /**
+  * h1 is a flex item of the flex container
+  * flex-grow is 1 - don't shrink wrap around the content
+  * flex-shrink is 1 - allow the item to shrink to fit the container
+  * flex-basis is auto - the initial size of the item
+  * the flex direction is row (left to right) layout the h1 in the row direction
+  * margin is 0 remove the default margin - creating an edge-to-edge design
+  * line-height is 4 * font-size - this will set the actual height of the line box
+  * the text will be vertically centered in the in the line box
+  * background is a gradient
+  * border-radius is 10px all 4 corners - will be overridden in the media query
+  */
+ /* prettier-ignore */
+ header h1 {
+     flex: 1 1 auto;
+     margin: 0;
+     color: #fff;
+     line-height: 4;
+     text-align: center;
+     letter-spacing: 4px;
+     text-shadow: 2px 2px 10px black;
+     background: 
+         transparent 
+         linear-gradient(
+             to bottom, 
+             hsla(60, 69%, 49%, 0.7) 5px, 
+             hsla(218, 62%, 50%, 0.7) 25px, 
+             hsla(60, 69%, 49%, 0.7)
+                      );
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+     border-bottom-left-radius: 10px;
+     border-bottom-right-radius: 10px;
+ }
+ 
+ /**
+  * sup is a superscript element
+  * used for footnotes, endnotes, power, and exponents
+  * font-size is 0.6 * inherited font-size
+  * find the value of the inherited font-size from the parent element
+  * multiply by 0.6
+  * use the Developer Tools Computed tab/panel to find the actual font-size of the parent element
+  */
+ header h1 sup {
+     font-size: 0.6em;
+ }
+ 
+ /**
+  * background gradient
+  * small gradient on top
+  * first color is 0% from the top
+  * second color is 5% from the top
+  * third color is 20% from the top (same color as the background)
+  */
+ /* prettier-ignore */
+ section {
+     margin: 20px;
+     border: 2px solid rgb(2, 38, 103);
+     border-radius: 10px;
+     padding: 10px;
+     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
+     background:  
+         linear-gradient(
+             to bottom, 
+             hsla(220, 87%, 50%, 0.348) 0%, 
+             hsla(206, 86%, 53%, 0.559) 5%, 
+             hsl(51, 76%, 80%) 20%
+         )
+         #fff;
+ }
+ 
+ /**
+  * margin 24px on top and bottom
+  * zero on right and left
+  * 6px on bottom (override the 24px)
+  */
+ h2 {
+     margin: 12px 20px ;
+ }
+ 
+ /**
+  * use larger line-height for improved readability
+  * set maximum width to 60ch (60 characters) for improved readability
+  */
+ p {
+     margin: 12px 0;
+     line-height: 1.4;
+     max-width: 85ch;
+ }
+ 
+ /**
+  * Responsive Images
+  * set width to 100%
+  * images will scale to fit the container
+  * percentage is based on the width of the containing block (parent element)
+  */
+ img {
+     width: 100%;
+     border-radius: 10px;
+ }
+ 
+ /**
+  * Setup flex container
+  * elements flow in row direction (left to right)
+  * gap between elements is 20px
+  * margin is 0 on top 
+  * 20px on right and left
+  * 20px on bottom
+  */
+ footer {
+     display: flex;
+     gap: 20px;
+     margin: 0 20px 20px;
+ }
+ 
+ /**
+  * All anchor pseudo states
+  * remove default text decoration
+  * color is white
+  * height is 2 * font-size (2 * 16 = 32)
+  */
+ footer a {
+     color: white;
+     text-decoration: none;
+     line-height: 2;
+ }
+ 
+ /**
+  * first child of footer
+  * margin-right is auto
+  * as a flex item margin auto will consume all available space (unused pixels
+  * the other flex items will be pushed to the right)
+  */
+ footer a:first-child {
+     margin-right: auto;
+     color: rgb(2, 38, 103);
+ }
+ 
+ /**
+  * square brackets are attribute selectors
+  * href^="javascript" means href attribute starts with javascript
+  * the $ means ends with
+  * the * means contains
+  * the ~ means contains word
+  * the | means starts with
+  * the ^ means starts with
+  * the = means is equal to
+  * the != means is not equal to
+  * position is relative (setting up for the active state - moving the element down 2px)
+  * style like a button
+  */
+ footer a[href^="javascript"] {
+     position: relative;
+     color: #000;
+     background-color: #fff;
+     border-radius: 3px;
+     padding: 0 10px;
+     box-shadow: 0 2px 2px #000;
+ }
+ 
+ footer a[href^="javascript"]:active {
+     top: 2px;
+     box-shadow: none;
+ }
+ 
+ /*
+ Start Media Query
+     if screen is 48rem or larger (can use px or em)
+     rem is based on font size of root element
+         (16px * 48 = 768)
+     use the following rules
+ */
+ 
+ @media (min-width: 48rem) {
+     /**
+      * override the margin of the container 
+      * margin is now 20px on top and bottom
+      * auto on left and right
+      * auto will center the container
+      */
+     .wrapper {
+         margin: 20px auto;
+     }
+     /**
+      * height is 400px - a design decision
+      * multiple background images
+      * background is the shorthand property
+      * url() is the background-image property
+      * no-repeat is the background-repeat property
+      * 80px -10px is the background-position property (x, y)
+      * / 200px 200px is the background-size property (width, height)
+      */
+     /* prettier-ignore */
+     header {
+         height: 400px;
+         background: 
+             url(images/onSale.webp) no-repeat 0px -30px / 200px 200px, 
+             url(images/openingDay.webp) no-repeat top 15px right 15px / 125px 125px, 
+             url(images/AmFamField.webp) no-repeat center center / cover, 
+             linear-gradient(
+                 to bottom, 
+                 hsl(201, 100%, 48%), 
+                 hsl(213, 100%, 44%))
+             #000;
+     }
+ 
+     /**
+      * font-size is 2.75 * inherited font-size (16px)
+      * height is 2 * font-size (2.75 * 16 = 44)
+      * flex item flowing in row direction (left to right the main axis)
+      * align-self is flex-end (bottom of flex container the cross axis)
+      * remove border-radius from top of header
+      */
+     header h1 {
+         font-size: 2.75em;
+         line-height: 2;
+         align-self: flex-end;
+         border-top-left-radius: 0px;
+         border-top-right-radius: 0px;
+     }
+ 
+     /**
+      * override the width of the image (auto is the intrinsic width)
+      * float the image to the right
+      * set margin opposite the float direction
+      */
+     img {
+         width: auto;
+         float: right;
+         margin: 0 0 2px 4px;
+     }
+ }
