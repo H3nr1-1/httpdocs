@@ -65,7 +65,7 @@
  
  .wrapper {
      display: grid;
-     max-width: 800px;
+     max-width: 900px;
      border: 2px solid rgb(2, 38, 103);
      border-radius: 10px;
      background: rgb(216, 195, 7);
@@ -151,17 +151,7 @@
      border-bottom-right-radius: 10px;
  }
  
- /**
-  * sup is a superscript element
-  * used for footnotes, endnotes, power, and exponents
-  * font-size is 0.6 * inherited font-size
-  * find the value of the inherited font-size from the parent element
-  * multiply by 0.6
-  * use the Developer Tools Computed tab/panel to find the actual font-size of the parent element
-  */
- header h1 sup {
-     font-size: 0.6em;
- }
+
  
  /**
   * background gradient
@@ -180,43 +170,140 @@
      background:  
          linear-gradient(
              to bottom, 
-             hsla(220, 87%, 50%, 0.348) 0%, 
-             hsla(206, 86%, 53%, 0.559) 5%, 
-             hsl(51, 76%, 80%) 20%
+             hsla(220, 96%, 19%, 0.348) 0%, 
+             hsla(206, 90%, 49%, 0.559) 5%, 
+             hsl(51, 73%, 54%) 20%
          )
          #fff;
  }
- 
- /**
-  * margin 24px on top and bottom
-  * zero on right and left
-  * 6px on bottom (override the 24px)
-  */
- h2 {
-     margin: 12px 20px ;
+
+ section h2 {
+    font-size: 2rem;
+    text-align: center;
  }
  
- /**
-  * use larger line-height for improved readability
-  * set maximum width to 60ch (60 characters) for improved readability
-  */
- p {
-     margin: 12px 0;
-     line-height: 1.4;
-     max-width: 85ch;
- }
+ /* START of CARDS  */
+
+ .cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.cards .card {
+    border: 3px solid royalblue;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgb(3, 15, 143);
+    flex: 0 0 calc(100% - 20px);
+    display: flex;
+    margin: 10px;
+    min-width: 0;
+    background: rgb(43, 66, 144);
+}
+
+.cards .card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100%;
+}
+
+.cards .card-figure {
+    position: relative;
+    margin: 0;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.cards .card-figure-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transform-origin: 80% 12%;
+    transform: rotate(0) scale(1);
+    transition: all .5s;
+}
+
+.cards .card-figure-caption {
+    padding: 0 10px;
+}
+
+.cards .card-link:hover .card-figure-image {
+    transform: rotate(366deg) scale(1.25);
+    filter: grayscale(0);
+}
+
+.cards .card-figure-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    background: hsla(58, 90%, 47%, 0.5);
+    text-shadow: 1px 1px black;
+    color: hsla(0, 0%, 100%, 1);
+    backdrop-filter: blur(5px);
+    line-height: 2;
+    font-style: italic;
+}
+
+.cards .card-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: gold;
+}
+
+.cards .card-section-title {
+    margin-bottom: 0;
+    border-bottom: 2px dashed;
+}
+
+.cards .card-section-meta {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards .card-section-meta * {
+    flex: 0 0 50%;
+    font-size: .8em;
+    line-height: 2;
+}
+
+.cards .card-section-meta :nth-child(even) {
+    text-align: right;
+}
+
+.cards .card-section-excerpt {
+    flex-grow: 1;
+}
+
+.cards .card-section-button {
+    background: royalblue;
+    color: white;
+    box-shadow: 3px 3px black;
+    align-self: flex-end;
+    margin: 10px;
+    padding: 0 1em;
+    border-radius: .5em;
+    border: 1px solid;
+    line-height: 2;
+}
+
+.card-section-button:hover {
+    background: royalblue;
+    color: rgb(233, 202, 21);
+}
  
- /**
-  * Responsive Images
-  * set width to 100%
-  * images will scale to fit the container
-  * percentage is based on the width of the containing block (parent element)
-  */
- img {
-     width: 100%;
-     border-radius: 10px;
- }
- 
+.card-section-button:active {
+    transform: translateX(3px);
+    box-shadow: none;
+}
+
+
  /**
   * Setup flex container
   * elements flow in row direction (left to right)
@@ -289,7 +376,7 @@
      use the following rules
  */
  
- @media (min-width: 48rem) {
+ @media (min-width: 768px) {
      /**
       * override the margin of the container 
       * margin is now 20px on top and bottom
@@ -347,4 +434,12 @@
          float: right;
          margin: 0 0 2px 4px;
      }
+
+     .cards .card {
+        flex: 0 0 calc(50% - 20px);
+    }
+
+    .cards .card-figure-image {
+        filter: blur(5px);
+    }
  }
