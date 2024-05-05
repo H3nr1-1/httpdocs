@@ -52,10 +52,7 @@
 
 /* When a nav link is clicked on it will be highlighted!*/
 .active {
-    background: rgb(15, 58, 139);
-    box-shadow: 0px 0px 5px 10px rgb(48, 106, 171);
-    border: 2px rgb(27, 55, 139);
-    font-weight: bold;
+    box-shadow: 0 0 5px 5px rgb(95, 87, 4);
 }
 
 .nav-main {
@@ -82,12 +79,12 @@
 }
 
 .nav-main-menu-toggle rect:nth-child(1) {
-    transition: all 1s linear;
+    transition: all 0.8s linear;
     transform-origin: center;
 }
 
 .nav-main-menu-toggle rect:nth-child(2) {
-    transition: all 1.5s ease-out;
+    transition: all 1.2s ease-out;
     transform-origin: center;
 }
 
@@ -149,7 +146,7 @@
     border-top: 5px solid rgb(27, 55, 139);
     border-right: 5px solid rgb(27, 55, 139);
     z-index: 999;
-}
+} 
 
 #nav-main-menu li a {
     color: white;
@@ -234,7 +231,7 @@
 p {
     margin: 12px 12px;
     line-height: 1.4;
-    max-width: auto;
+    max-width: 100%;
 }
 
 img {
@@ -248,7 +245,7 @@ img {
     align-items: center;
     justify-content: center;
     margin: 1rem 0;
-    padding: 1.5rem auto;
+    padding: 1.5rem;
 }
 
 .cta-more-link {
@@ -257,37 +254,41 @@ img {
     margin: 10px;
     padding: 0 1em;
     text-decoration: none;
-    border-radius: .5em;
-    border: 2px solid hsl(0, 0%, 0%);
+    border-radius: 5px;
+    border: 2px solid rgb(16, 15, 15);
     font-weight: bold;
-    transition: all .3s ease-in-out;
 }
 
 .cta-more-link-success {
-    color: black;
+    color: white;
     background: rgb(27, 88, 229);
     box-shadow: 2px 2px black;
 }
 
 .cta-more-link:hover {
-    box-shadow: 0px 0px 5px hsl(236, 86%, 54%);
-    background: hsl(297, 99%, 27%);
-    color: white;
+    box-shadow: 2px 2px black;
+    background: hsl(300, 16%, 96%);
+    color: black;
+    cursor: grab;
 }
 
 .cta-more-link:active {
     animation: press 0.2s 1 ease-in-out;
+    cursor: grabbing;
 }
 
 @keyframes press {
     0% {
         transform: scale(1);
+        box-shadow: 2px 2px black;
     }
     50% {
         transform: scale(0.82);
+        box-shadow: none;
     }
     to {
         transform: scale(1);
+        box-shadow: 2px 2px black;
     }
 }
 
@@ -403,11 +404,13 @@ img {
 .card-section-button:hover {
     background: royalblue;
     color: rgb(233, 202, 21);
+    cursor: grab;
 }
  
 .card-section-button:active {
     transform: translateX(3px);
     box-shadow: none;
+    cursor: grabbing;
 }
 
 /*  ***END OF CARDS***  */
