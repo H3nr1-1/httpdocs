@@ -24,7 +24,7 @@
                 <li><a class="hamburgerNav active" href="index.html">Home</a></li>
                 <li><a class="hamburgerNav" href="">History</a></li>
                 <li><a class="hamburgerNav" href="">Tickets</a></li>
-                <li><a class="hamburgerNav" href="">Hall of Fame</a></li>
+                <li><a class="hamburgerNav" href="">Team Store</a></li>
                 <li><a class="hamburgerNav" href="">About Us</a></li>
             </ul>
         </nav>
@@ -174,16 +174,18 @@
         <section>
             <div class="call-out">
                 <h2 class="call-out-heading">Subscribe to the Brewers Fan Page!</h2>
-                <p class="call-out-intro">Subscribe for daily stats, news, updates, and upcoming fan interactive events! </p>
+                <p class="call-out-intro">Subscribe for daily news, updates, and upcoming fan interactive events! </p>
                 <form class="subscribe-newsletter" action="https://buchholz.bitweb1.nwtc.edu/api/wfed1/subscribe-newsletter/" method="post">
                     <fieldset>
+                        <label for="name">Name</label>
+                        <input id="name" type="name" name="name" placeholder="Enter your name" required>
                         <label for="email">Email</label>
                         <input id="email" type="email" name="email" placeholder="Enter your email" required>
-                        <label class="subscribe-newsletter-message">No spam — we won't sell your email.</label>
+                        <label class="subscribe-newsletter-message">Unsubscribe at any time.</label>
                     </fieldset>
                     <fieldset>
                         <input type="hidden" name="message" value="	&#9918; You are now subscribed!">
-                        <input type="hidden" name="delay" value="8">
+                        <input type="hidden" name="delay" value="5">
                         <input type="submit" name="submit" value="Subscribe">
                     </fieldset>
                 </form>

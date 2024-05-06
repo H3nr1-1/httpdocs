@@ -14,15 +14,10 @@
      margin: 0;
      min-height: 100dvh;
      background: 
-         url(images/champs.webp) no-repeat top 0 right 25px fixed, 
+         url(images/champs.webp) no-repeat top 50% left 10px fixed, 
          url(images/brewer_logo.webp) repeat-x left bottom 25px / 15em, 
          fixed
-         linear-gradient(
-             to bottom, 
-             rgb(216, 195, 7) 2%, 
-             rgb(2, 38, 103) 64%
-             )
-         #000;
+         rgb(2, 38, 103);
  }
  
  
@@ -32,6 +27,7 @@
      border: 2px solid rgb(2, 38, 103);
      border-radius: 10px;
      background: rgb(216, 195, 7);
+     box-shadow: 0px 0px 20px 10px darkgray;
      margin-top: 10px;
      margin-bottom: 10px;
  }
@@ -219,8 +215,7 @@
              hsla(220, 96%, 19%, 0.348) 0%, 
              hsla(206, 90%, 49%, 0.559) 5%, 
              hsl(51, 73%, 54%) 20%
-         )
-         #fff;
+         );
  }
 
  section h2 {
@@ -249,7 +244,7 @@ img {
 }
 
 .cta-more-link {
-    font-size: 1.2em;
+    font-size: 1.5em;
     line-height: 2;
     margin: 10px;
     padding: 0 1em;
@@ -291,8 +286,6 @@ img {
         box-shadow: 2px 2px black;
     }
 }
-
-
 /* ***END BUTTON*** */
  
  /*  ***START of CARDS***  */
@@ -511,8 +504,17 @@ img {
     color: var(--color-button-dark);
 }
 
+.subscribe-newsletter input[type=name] {
+    background: var(--color-white-60);
+}
+
 .subscribe-newsletter input[type=email] {
     background: var(--color-white-60);
+}
+
+.subscribe-newsletter input[type=name]:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 2px var(--color-button-dark);
 }
 
 .subscribe-newsletter input[type=email]:focus {
@@ -666,7 +668,7 @@ img {
     #nav-main-menu {
         position: relative;
         text-align: center;
-        margin-left: 0px;
+        margin-left: 10px;
         visibility: visible;
         transform: translateX(0);
         transition: none;
@@ -714,12 +716,13 @@ img {
 
     .subscribe-newsletter {
         flex-direction: row;
-        height: 8em;
+        height: 12em;
         align-items: center;
     }
 
     .subscribe-newsletter:valid input[type=submit] {
         transform: scale(1.2);
-    }    
+    } 
+
     /* END NEWS LETTER */
  }
