@@ -13,8 +13,9 @@
  body {
      margin: 0;
      min-height: 100dvh;
-     background: 
-         url(images/champs.webp) no-repeat top 50% left  fixed, 
+     background:
+        url(images/1982_brewers_al.webp) no-repeat top 15px left 30px fixed,  
+        url(images/champs.webp) no-repeat top 50% left fixed,
          rgb(2, 38, 103);
  }
  
@@ -24,7 +25,7 @@
      max-width: 900px;
      border: 2px solid rgb(2, 38, 103);
      border-radius: 5px;
-     background: rgb(167, 156, 50);
+     background: rgb(247, 231, 210);
      box-shadow: 0px 0px 20px 10px darkgray;
      margin-top: 10px;
      margin-bottom: 10px;
@@ -169,14 +170,13 @@
      border: 2px solid gray;
      margin: 20px;
      background: 
-        url(images/openingDay.webp) no-repeat top 100px right 20px / 75px 75px, 
-        url(images/AmFamField.webp) no-repeat center center / cover,
+     url(images/allstar.webp) no-repeat top 75px left -40px / 200px 125px, 
+     url(images/stadium.webp) no-repeat center center / cover,
         linear-gradient(
              to bottom, 
-             rgb(4, 60, 150), 
-             rgb(2, 38, 103)
-         )
-         #3427f3;
+             rgb(197, 198, 198), 
+             rgb(125, 138, 163)
+         );
      box-shadow: inset 0 2px 4px rgb(216, 195, 7);
  }
  
@@ -209,13 +209,7 @@
      border-radius: 8px;
      padding: 10px;
      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.8);
-     background:  
-         linear-gradient(
-             to bottom, 
-             hsla(220, 96%, 19%, 0.348) 0%, 
-             hsla(206, 90%, 49%, 0.559) 5%, 
-             hsl(51, 73%, 54%) 20%
-         );
+     background:rgb(167, 156, 50);
  }
 
  section h2 {
@@ -230,7 +224,8 @@ p {
 }
 
 img {
-    width: 100%;
+    width: 100%;    
+    border: inset 5px royalblue;
     border-radius: 10px;
 }
 
@@ -384,26 +379,39 @@ img {
 
 .cards .card-section-button {
     background: royalblue;
-    color: white;
+    color: rgb(233, 202, 21);
     box-shadow: 3px 3px black;
-    align-self: flex-end;
+    align-self: center;
     margin: 10px;
-    padding: 0 1em;
-    border-radius: .5em;
+    padding: .25em .25em;
+    border-radius: .375em;
     border: 1px solid;
     line-height: 2;
 }
 
 .card-section-button:hover {
-    background: royalblue;
-    color: rgb(233, 202, 21);
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
     cursor: grab;
 }
- 
+
+
 .card-section-button:active {
-    transform: translateX(3px);
-    box-shadow: none;
+    animation: .25s ease shrink;
     cursor: grabbing;
+}
+
+@keyframes shrink {  
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(0.75);
+            box-shadow: none;
+        }
+        to {
+            transform: scale(1);
+        }
 }
 
 /*  ***END OF CARDS***  */
@@ -639,8 +647,8 @@ img {
          height: 400px;
          background: 
              url(images/onSale.webp) no-repeat 0px -30px / 200px 200px, 
-             url(images/openingDay.webp) no-repeat top 15px right 15px / 125px 125px, 
-             url(images/AmFamField.webp) no-repeat center center / cover, 
+             url(images/allstar.webp) no-repeat top 125px left 15px / 200px 125px, 
+             url(images/stadium.webp) no-repeat center center / cover, 
              linear-gradient(
                 to bottom, 
                 rgb(4, 60, 150), 
@@ -719,7 +727,6 @@ img {
     .subscribe-newsletter {
         flex-direction: column;
         height: 14em;
-        align-items: left;
         text-align: center;
     }
 
