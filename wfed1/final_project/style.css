@@ -26,7 +26,7 @@
      max-width: 900px;
      border: 2px solid rgb(2, 38, 103);
      border-radius: 5px;
-     background: rgb(247, 231, 210);
+     background: rgb(248, 231, 210);
      box-shadow: 0px 0px 20px 10px darkgray;
      margin-top: 10px;
      margin-bottom: 10px;
@@ -169,7 +169,7 @@
  header {
      display: flex;
      border-radius: 10px;
-     border: 2px solid gray;
+     border: 2px solid rgb(29, 27, 27);
      margin: 20px;
      background: 
      url(images/allstar.webp) no-repeat top 75px left -40px / 200px 125px, 
@@ -252,9 +252,16 @@ img {
 
 .cta-more-link:hover {
     box-shadow: 2px 2px black;
-    background: hsl(300, 16%, 96%);
-    color: black;
+    background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+    animation:slide 5s linear infinite;
+    text-shadow: 2px 2px black;
     cursor: grab;
+}
+
+@keyframes slide {
+  to {
+    background-position:20vw;
+  }
 }
 
 .cta-more-link:active {
@@ -295,7 +302,7 @@ img {
     display: flex;
     margin: 10px;
     min-width: 0;
-    background: rgb(43, 66, 144);
+    background: rgb(248, 231, 210);
 }
 
 .cards .card-link {
@@ -316,7 +323,7 @@ img {
 .cards .card-figure-image {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
     object-fit: cover;
     transform-origin: 80% 12%;
     transform: rotate(0) scale(1);
@@ -332,7 +339,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0px;
-    background: hsla(58, 90%, 47%, 0.5);
+    background: hsla(222, 93%, 46%, 0.5);
     text-shadow: 1px 1px black;
     color: hsla(0, 0%, 100%, 1);
     backdrop-filter: blur(5px);
@@ -385,8 +392,13 @@ img {
 }
 
 .card-section-button:hover {
-    color: rgb(0, 0, 0);
-    background: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(
+        325deg,
+        hsl(240deg 100% 20%) 0%,
+        hsl(329deg 100% 35%) 50%,
+        hsl(58deg 100% 49%) 100%
+      );
     cursor: grab;
 }
 
@@ -707,6 +719,10 @@ img {
     .cards .card {
         flex: 0 0 calc(50% - 20px);
         /* flex: 0 0 calc(33% - 20px); */
+    }
+
+    .cards .card:nth-child(7) {
+        flex: 0 0 calc(100% - 20px);
     }
 
     .cards .card-link:hover .card-figure-image {
