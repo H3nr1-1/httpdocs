@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(210, 207, 207);
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+    font-family: "Merriweather", serif;
+    gap: 10px;
+    padding: 15px;
+    background: rgb(237, 237, 22);
+    border-radius: 15px;  
+    box-shadow: 0 0 20px black;  
+}
+
+header{
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 10px;
+    color: rgb(26, 41, 247);
+    text-shadow: 0 0 3px rgb(26, 41, 247);
+    text-decoration: underline;
+    padding: 40px;
+    margin-bottom: 15px;
+}
+
+h2{
+    padding: 10px;
+    text-align: center;
+    font-size: 1.75rem;
+    text-shadow: 2px 2px 5px rgb(26, 41, 247);
+    text-decoration: underline black;
+}
+
+section{
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    color:black;
+    margin-top: 20px;
+    border-bottom:  5px dotted rgb(11, 37, 203);
+}
+
+section p{
+    text-align: left;
+    padding: 15px;
+    line-height: 2;
+}
+
+a{
+    text-decoration: none;
+}
+
+.source{
+    font-size: 1.5em;
+    color: red;
+}
+
+.source:hover{
+    text-decoration: underline red;
+    cursor: grab;
+
+}
+
+footer{
+    padding:20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: .9rem;
+}
+
+.foot-links{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.home{
+    margin-right: 80px;
+}
+
+footer a{
+    padding: 10px;
+    color: rgb(202, 8, 160);
+    text-shadow: 1px 1px black;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: rgb(4, 27, 233);
+}
+
+
+@media  screen and (min-width: 768px) {
+
+    header{
+        font-size: 2rem;
+        padding: 0;
+    }
+
+    section{
+        margin-left: 150px;
+        margin-right: 150px;
+    }
+    
+}
