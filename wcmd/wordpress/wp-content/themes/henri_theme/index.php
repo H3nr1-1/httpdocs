@@ -28,7 +28,7 @@
     </main>
     
     <footer>
-        <a href="/">&copy; 1999 - Robert</a>
+        <a href="/index.html">&copy; 2024 - Chris</a>
         <a href="javascript:void(location='https://jigsaw.w3.org/css-validator/validator?uri='+escape(location))">CSS</a>
         <a href="javascript:void(location='https://validator.w3.org/nu/?doc='+escape(location))">HTML</a>
     </footer>
