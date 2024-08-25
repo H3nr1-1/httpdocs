@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+
+
+html {
+    box-sizing : border-box;
+    scroll-behavior : smooth;
+}
+*, *::before, *::after {
+    box-sizing : inherit;
+}
+:root {
+    --opacity : 1;
+    --color-hue : 200;
+    --color-white : hsl(0 0% 100%);
+    --color-gray-light : hsl(0 0% 96%);
+    --color-gray : hsl(0 0% 83%);
+    --color-gray-dark : hsl(0 0% 40%);
+    --color-black : hsl(0 0% 0%);
+    --gap : 1rem;
+    --header-h1-x : 0;
+    --header-h1-y : 0;
+    --footer-links : rgb(133, 126, 126);
+}
+
+.envy {
+    --color-hue : 156;
+    --header: rgb(137, 188, 251);
+    --body:  rgb(203, 226, 252);
+    --header-h1-x : 0;
+    --header-h1-y : calc(75px - 50%);
+    --header-font:  "Spicy Rice", serif;
+    --nav-hover: rgb(209, 227, 250);
+
+}
+
+body {
+    margin : 0;
+    font-family : sans-serif;
+    background : var(--body);
+}
+
+.wrapper {
+    width : min(calc(100%), 1280px);
+    margin : 0 auto;
+    background : var(--color-gray-light);
+}
+
+header, main, footer {
+    padding : 0 var(--gap);
+}
+
+header {
+    font-family: var(--header-font);
+    background : var(--header);
+    letter-spacing: 4px;
+    height : 200px;
+    padding : 20px 0;
+    display : flex;
+    flex-direction : column;
+    justify-content : center;
+    align-items: center;   
+}
+
+header h1 {
+    display: flex;
+    align-content: center;
+    color: var(--color-gray-dark);
+    font-size: 4em;
+}
+
+header a {
+    margin-top : auto;
+    line-height : 50px;
+    color : var(--color-black);
+    padding : 0 var(--gap);
+    text-align : right;
+    text-decoration : none;
+    text-decoration : none;
+    letter-spacing : 0.3em;
+    transition : all 0.5s;
+}
+
+header a::after {
+    opacity : 0;
+    position : relative;
+    display : inline-block;
+    transition : all 0.5s;
+    transform : rotate(-48deg) translateX(60%);
+    transform-origin : 20% 80%;
+    transition : all 0.5s;
+}
+
+header a:hover::after {
+    opacity : 1;
+    transition : all 0.5s;
+}
+
+header a:hover, header a:focus {
+    letter-spacing : -0.1em;
+    font-style : italic;
+}
+
+header a:active {
+    letter-spacing : 10em;
+    opacity : 0;
+}
+
+nav {
+    display : flex;
+    justify-content: center;
+    background : var(--color-white);
+    border-top : 1px solid var(--color-gray);
+    border-bottom : 1px solid var(--color-gray);
+    }
+
+nav ul {
+    list-style : none;
+    padding : 0;
+    margin : 10px;
+    display : flex;
+    gap : 8px;
+}
+
+nav ul a {
+    display : flex;
+    text-decoration : none;
+    font-weight : bold;
+    line-height : 4;
+    padding : 0 calc(var(--gap) * 0.5);
+    border-radius : var(--gap);
+    border : transparent solid 2px;
+    transition : all 0.5s ease-in;
+    color : var(--color-black);
+}
+
+nav ul a:hover {
+    border : var(--header) solid 2px;
+    background : var(--nav-hover);
+}
+
+main {
+    animation : fade-in-move-down 0.7s;
+}
+
+.review {
+    display : flex;
+    flex-direction : column;
+    gap : calc(var(--gap));
+    margin : calc(var(--gap) * 2) 0;
+}
+
+.review h2 {
+    margin: 25px;
+    position : relative;
+    overflow : hidden;
+}
+
+.review-featured-image {
+    flex : 0 0 calc(40% - calc(var(--gap) * 0.5));
+    margin : 0;
+}
+
+.review-featured-image img {
+    width : 100%;
+    object-fit : cover;
+    border : var(--color-gray) solid 2px;
+    padding : var(--gap);
+    background : var(--body);
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px;
+}
+
+.review-featured-image figcaption {
+    text-align : right;
+    font-style : italic;
+    padding : 0 var(--gap);
+    color : var(--color-gray-dark);
+}
+
+.review-content {
+    flex : 0 0 calc(60% - calc(var(--gap) * 0.5));
+}
+
+.review-content p {
+    line-height : 1.8;
+    font-size : 1.125rem;
+    max-width : 65ch;
+    /* max-width : 70ex; */
+}
+
+footer {
+    padding: 50px;
+}
+
+.foot-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--color-white);
+    border: 2px solid var(--color-black);
+    background: var(--footer-links);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--color-black);
+    background: var(--color-white);
+}
+
+@media screen and (min-width: 768px) {
+nav ul {
+    flex-direction : row;
+}
+
+nav ul li a {
+    padding : 0 calc(var(--gap) * 2);
+}
+
+.review {
+    flex-direction : row;
+}
+}
