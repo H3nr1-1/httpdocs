@@ -9,6 +9,9 @@ html {
     box-sizing : inherit;
 }
 :root {
+    --color-primary:hsl(200,55%,50%);
+    --color-secondary: hsl(201, 81%, 75%) ;
+    --color-cta: hsl(175,50%,50%);
     --opacity : 1;
     --color-hue : 200;
     --color-white : hsl(0 0% 100%);
@@ -16,13 +19,24 @@ html {
     --color-gray : hsl(0 0% 83%);
     --color-gray-dark : hsl(0 0% 40%);
     --color-black : hsl(0 0% 0%);
+    --card-before: hsl(334,44%,54%);
+    --card-after: hsl(216, 88%, 35%);
     --gap : 1rem;
     --header-h1-x : 0;
     --header-h1-y : 0;
     --footer-links : rgb(133, 126, 126);
+    --transition-time: 0.5s;
 }
 
 .envy {
+    --color-primary: hsl(100, 47%, 43%);
+    --color-secondary: hsl(100, 79%, 77%);
+    --color-cta: hsl(80,60%,50%);
+    --color-white : hsl(0 0% 100%);
+    --color-gray-light : hsl(0 0% 96%);
+    --color-gray : hsl(0 0% 83%);
+    --color-gray-dark : hsl(0 0% 40%);
+    --color-black : hsl(0 0% 0%);
     --color-hue : 156;
     --header: rgb(137, 188, 251);
     --body:  rgb(203, 226, 252);
@@ -30,19 +44,36 @@ html {
     --header-h1-y : calc(75px - 50%);
     --header-font:  "Spicy Rice", serif;
     --nav-hover: rgb(209, 227, 250);
+}
 
+.veerle {
+    --color-primary: hsl(66, 62%, 47%);
+    --color-secondary: hsl(286, 74%, 52%);
+    --color-cta: hsl(24, 79%, 53%);
+    --color-white : hsl(0 0% 100%);
+    --color-gray-light : hsl(0 0% 96%);
+    --color-gray : hsl(0 0% 83%);
+    --color-gray-dark : hsl(0 0% 40%);
+    --color-black : hsl(0 0% 0%);
+    --color-hue : 156;
+    --header: rgb(137, 188, 251);
+    --body:  rgb(203, 226, 252);
+    --header-h1-x : 0;
+    --header-h1-y : calc(75px - 50%);
+    --header-font:  "Spicy Rice", serif;
+    --nav-hover: rgb(209, 227, 250);
 }
 
 body {
     margin : 0;
     font-family : sans-serif;
-    background : var(--body);
+    background : var(--color-secondary);
 }
 
 .wrapper {
     width : min(calc(100%), 1280px);
     margin : 0 auto;
-    background : var(--color-gray-light);
+    background : var(--color-primary);
 }
 
 header, main, footer {
@@ -51,7 +82,6 @@ header, main, footer {
 
 header {
     font-family: var(--header-font);
-    background : var(--header);
     letter-spacing: 4px;
     height : 200px;
     padding : 20px 0;
@@ -64,7 +94,7 @@ header {
 header h1 {
     display: flex;
     align-content: center;
-    color: var(--color-gray-dark);
+    color: var(--color-black);
     font-size: 4em;
 }
 
@@ -134,13 +164,148 @@ nav ul a {
 }
 
 nav ul a:hover {
-    border : var(--header) solid 2px;
-    background : var(--nav-hover);
+    border : var(--color-primary) solid 2px;
+    background : var(--color-cta);
 }
 
 main {
     animation : fade-in-move-down 0.7s;
 }
+
+section{
+    border: 2px solid var(--color-black);
+    padding: 10px;
+    background: var(--color-white);
+    border-radius: 15px;
+}
+
+/* Start of Cards */
+
+.cards-wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+    width: max-content;
+  }
+  
+  .card {
+    font-family: 'Heebo';
+    --bg-filter-opacity: 0.5;
+    background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
+    height: 20em;
+    width: 12em;
+    font-size: 1.5em;
+    color: var(--color-white);
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 5em -1em var(--color-black);
+    transition: all, var(--transition-time);
+    position: relative;
+    overflow: hidden;
+    border: 10px solid var(--color-gray-light);
+    text-decoration: none;
+  }
+  
+  .card:hover {
+    transform: rotate(0);
+  }
+  
+  .card h1 {
+    margin: 0;
+    font-size:1.5em;
+  }
+  
+  .card p {
+    font-size: 0.65em;
+    font-family: 'Open Sans';
+    margin-top: 0.5em;
+  }
+  
+  .card .tags {
+    display: flex;
+  }
+  
+  .card .tags .tag {
+    font-size: 0.75em;
+    background: var(--color-black);
+    border-radius: 0.3rem;
+    padding: 0 0.5em;
+    margin-right: 0.5em;
+    line-height: 1.5em;
+    transition: all, var(--transition-time);
+  }
+  
+  .card:hover .tags .tag {
+    background: var(--color);
+    color: var(--color-white);
+  }
+  
+  .card:before, .card:after {
+    content: '';
+    transform: scale(0);
+    transform-origin: top left;
+    border-radius: 50%;
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    z-index: -5;
+    transition: all, var(--transition-time);
+    transition-timing-function: ease-in-out;
+  }
+  
+  .card:before {
+    background: var(--card-before);
+    width: 250%;
+    height: 250%;
+  }
+  
+  .card:after {
+    background: var(--card-after);
+    width: 200%;
+    height: 200%;
+  }
+  
+  .card:hover {
+    color: var(--color);
+  }
+  
+  .card:hover:before, .card:hover:after {
+    transform: scale(1);
+  }
+  
+  .card-grid-space .num {
+    font-size: 3em;
+    margin-bottom: 1.2rem;
+    margin-left: 1rem;
+  }
+  
+  .info {
+    font-size: 1.2em;
+    display: flex;
+    padding: 1em 3em;
+    height: 3em;
+  }
+  
+  .info img {
+    height: 3em;
+    margin-right: 0.5em;
+  }
+  
+  .info h1 {
+    font-size: 1em;
+    font-weight: normal;
+  }
+
+  /* End of Cards */
 
 .review {
     display : flex;
@@ -185,7 +350,6 @@ main {
     line-height : 1.8;
     font-size : 1.125rem;
     max-width : 65ch;
-    /* max-width : 70ex; */
 }
 
 footer {
@@ -225,4 +389,29 @@ nav ul li a {
 .review {
     flex-direction : row;
 }
+
+}
+
+/* Website Review Home Page */
+@media screen and (max-width:768px){
+
+        .home{
+        font-size: 1rem;
+        padding: 10px;
+        border: 1px solid rgb(203, 52, 127);
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 0 100px inset rgb(203, 52, 127)
+    }
+
+    .cards-wrapper {
+      grid-template-columns: 1fr;
+    }
+    .info {
+      justify-content: center;
+    }
+    .card-grid-space .num {
+      margin-left: 0;
+      text-align: center;
+    }
+
 }
