@@ -1,37 +1,36 @@
-<?php
-get_header();
-?>
-<div class="main-content">
-    <main>
-        <div class="cards">
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <section class="card">
-                <h2><a href="<?php the_permalink(); ?>" title="For More Info on <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-                <?php the_content(); ?>
-            </section>
-            <?php endwhile; else: ?>
-            <p><?php _e( 'Sorry, no posts matched your criteria!' ); ?></p>
-            <?php endif; ?>
+<div class="footer-main">
+    <div class="footer-upper">
+        <div class="widget">
+            <h2>Widget</h2>
+            <p>Widget Content - Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt fugit quaerat quas possimus illum laborum voluptatibus pariatur excepturi a, mollitia numquam esse voluptatem. Necessitatibus ratione temporibus id hic molestias maxime!</p>
         </div>
-    </main>
-
-    <aside>
-        <h2>Sidebar</h2>
-        <section>
+        <div class="widget">
             <h2>Widget</h2>
             <p>Widget Content - Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt fugit quaerat quas possimus illum laborum voluptatibus pariatur excepturi a, mollitia numquam esse voluptatem. Necessitatibus ratione temporibus id hic molestias maxime!</p>
-        </section>
-        <section>
+        </div>
+        <div class="widget">
             <h2>Widget</h2>
             <p>Widget Content - Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt fugit quaerat quas possimus illum laborum voluptatibus pariatur excepturi a, mollitia numquam esse voluptatem. Necessitatibus ratione temporibus id hic molestias maxime!</p>
-        </section>
-        <section>
-            <h2>Widget</h2>
-            <p>Widget Content - Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt fugit quaerat quas possimus illum laborum voluptatibus pariatur excepturi a, mollitia numquam esse voluptatem. Necessitatibus ratione temporibus id hic molestias maxime!</p>
-        </section>
-    </aside>
+        </div>
+    </div>
+    <footer class="footer-lower">
+        <?php
+                    $footer_nav = array(
+                        'theme_location' => 'nav-footer',
+                        'container' => 'nav',
+                        'container_class' => 'nav-footer',
+                        'depth' => 1
+                    );
+                    wp_nav_menu( $footer_nav );
+                ?>
+    </footer>
+</div>
 </div>
 
 <?php
-get_footer();
+wp_footer();
 ?>
+
+</body>
+
+</html>
