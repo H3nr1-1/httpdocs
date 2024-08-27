@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap');
 
-
 html {
     box-sizing : border-box;
     scroll-behavior : smooth;
@@ -90,7 +89,12 @@ header h1 {
     display: flex;
     align-content: center;
     color: var(--color-black);
-    font-size: 4em;
+    font-size: 3.5em;
+    border: 1px solid var(--gray-dark);
+    background: var(--color-white);
+    border-radius: 10px;
+    box-shadow: 0 0 10px;
+    padding: 10px;
 }
 
 header a {
@@ -150,7 +154,8 @@ nav ul a {
     display : flex;
     text-decoration : none;
     font-weight : bold;
-    line-height : 4;
+    font-size: 1.2rem;
+    line-height : 2;
     padding : 0 calc(var(--gap) * 0.5);
     border-radius : var(--gap);
     border : transparent solid 2px;
