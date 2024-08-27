@@ -194,12 +194,11 @@ section{
   
   .card {
     font-family: "Moderustic", sans-serif;
-    --bg-filter-opacity: 0.5;
-    background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
     height: 20em;
     width: 12em;
     font-size: 1.5em;
-    color: var(--color-white);
+    color: var(--color-black);
+    text-shadow: 1px 1px var(--color-white);
     border-radius: 1em;
     padding: 1em;
     margin: 1em;
@@ -211,7 +210,7 @@ section{
     transition: all, var(--transition-time);
     position: relative;
     overflow: hidden;
-    border: 10px solid var(--color-gray-light);
+    border: 10px solid var(--color-gray-dark);
     text-decoration: none;
   }
   
@@ -236,7 +235,8 @@ section{
   
   .card .tags .tag {
     font-size: 0.75em;
-    background: var(--color-gray-dark);
+    background: var(--color-white);
+    border: 2px solid var(--color-black);
     border-radius: 0.3rem;
     padding: 0 0.5em;
     margin-right: 0.5em;
@@ -245,7 +245,7 @@ section{
   }
   
   .card:hover .tags .tag {
-    background: var(--color);
+    background: var(--color-cta);
     color: var(--color-white);
   }
   
@@ -292,7 +292,7 @@ section{
     font-size: 1.2em;
     display: flex;
     padding: 1em 3em;
-    height: 3em;
+    height: 3em; 
   }
   
   .info img {
