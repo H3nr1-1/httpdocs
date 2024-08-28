@@ -34,15 +34,8 @@ header{
     margin-bottom: 15px;
 }
 
-h2{
-    padding: 10px;
-    text-align: center;
-    font-size: 1.75rem;
-    text-shadow: 2px 2px 5px rgb(26, 41, 247);
-    text-decoration: underline black;
-}
-
 section{
+    display: block;
     margin: auto;
     text-align: center;
     padding: 10px;
@@ -51,25 +44,34 @@ section{
     border-bottom:  5px dotted rgb(11, 37, 203);
 }
 
+h2{
+    padding: 10px;
+    text-align: center;
+    font-size: 1.75rem;
+    text-shadow: 2px 2px 5px rgb(26, 41, 247);
+}
+
 section p{
     text-align: left;
+    margin: auto;
     padding: 15px;
     line-height: 2;
+    max-width: 65ch;
 }
 
 a{
     text-decoration: none;
+    color: red;
 }
 
 .source{
-    font-size: 1.5em;
+    font-size: 1em;
     color: red;
 }
 
 .source:hover{
     text-decoration: underline red;
     cursor: grab;
-
 }
 
 footer{
