@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(226, 226, 244);
+    font-family: "Merriweather", serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1200px;
+    color: black;
+    background-color: rgb(109, 173, 246);
+    box-shadow: 0 0 20px inset;
+    border-radius: 10px;
+}
+
+header {
+    padding: 25px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    text-decoration: underline rgb(226, 226, 244);
+}
+
+section {
+    display: block;
+    margin: 20px;
+    margin-top: 30px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 1.5em;
+    border-bottom: 3px solid rgb(226, 226, 244);
+}
+
+section p {
+    padding: 20px;
+    line-height: 1.8;
+}
+
+.website{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.website:hover{
+    text-decoration: underline;
+    color: yellow;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.demo{
+    display: flex;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    background: white;
+}
+
+.source{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.source:hover{
+    text-decoration: underline;
+    color: yellow;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+footer{
+    padding: 20px;
+    margin-top: 15px;
+    font-size: .9rem;
+}
+
+.foot-links{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.home{
+    margin-right: 80px;
+}
+
+footer a{
+    padding: 10px;
+    color: rgb(202, 8, 160);
+    text-shadow: 1px 1px black;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: rgb(4, 27, 233);
+}
+
+@media  screen and (min-width: 768px) {
+
+h1 {
+    font-size: 4rem;
+}
+
+section {
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+main{
+    grid-template-columns: 1fr 1fr;
+}
+
+}
