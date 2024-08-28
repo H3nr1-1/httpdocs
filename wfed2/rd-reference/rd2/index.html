@@ -53,14 +53,15 @@
                     <a class="source" href="https://css-tricks.com/almanac/selectors/h/hover/">Hover</a>
                 </section>
                 <section>
-                    <h2>Disabled Selector</h2>
-                    <p>The disabled selector is used on buttons, input fields, text areas, options and fieldsets.  When used in the CSS, it disables the element.</p>
-                    <p>In the example I used the disable selector with the input element and then used the background property to fill the input field with a solid color.</p>
-                    <p class="demo">input:disabled {<br>
-                        background: rgb(4, 27, 233);<br>
+                    <h2>First-child Selector</h2>
+                    <p>The first-child selector is used along with another element, class, or id selector to target the immediate child within the parent element.  It is considered a "structural pseudo class" selector and it is used to style content based on the parent - child relationship.</p>
+                    <p>The first-child selector is mostly used to avoid using more class or id selectors.</p>
+                    <p class="demo">section:first-child {<br>
+                        color: darkblue;<br>
+                        font-family: Merriweather;<br>
                     }<br></p>
-                    <p>The the input element being disabled, the user can't input anything into the input box and the box is filled with a solid blue color.</p>
-                    <a class="source" href="https://css-tricks.com/almanac/selectors/d/disabled/">Disabled</a>
+                    <p>In the example, the first-child selector is calling out the immediate child of the section element.  It could be an h2, so on the web page it would make that heading stand out with a dark blue color and a different font than the rest of the page to let the user know that they are looking at a different area of text.</p> 
+                    <a class="source" href="https://css-tricks.com/almanac/selectors/f/first-child/">First-child</a>
                 </section>
             </main>
 
@@ -94,13 +95,13 @@
                     <a class="source" href="https://css-tricks.com/almanac/properties/t/text-stroke/">Text-stroke</a>
                 </section>
                 <section>
-                    <h2>Property</h2>
-                    <p></p>
-                    <p></p>
+                    <h2>Disabled Property</h2>
+                    <p>The disabled selector is used on buttons, input fields, text areas, options and fieldsets.  When used in the CSS, it disables the element.</p>
+                    <p>In the example I used the disable selector with the input element and then used the background property to fill the input field with a solid color.</p>
                     <p class="demo">input:disabled {<br>
                         background: rgb(4, 27, 233);<br>
                     }<br></p>
-                    <p></p>
+                    <p>The the input element being disabled, the user can't input anything into the input box and the box is filled with a solid blue color.</p>
                     <a class="source" href="https://css-tricks.com/almanac/selectors/d/disabled/">Disabled</a>
                 </section>
             </main>
