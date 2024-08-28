@@ -23,27 +23,8 @@
             <main>
                 <!-- Start of selector documentation and demo -->
                 <section>
-                    <h2>Class Selector</h2>
-                    <p>The CSS class selector is used to call out a specific element in the HTML code.  Unlike the ID, it can be used many times through a single page.</p>
-                    <p>For example, use the class "home", the CSS would look like:</p>
-                    <p class="demo">.home {<br>
-                            background: blue;<br>
-                        }<br></p>
-                    <p>In this example all elements that have the class name "home" would have a background color that is blue.</p>    
-                    <a class="source" href="https://css-tricks.com/almanac/selectors/c/class/">Class</a>
-                </section>
-                <section>
-                    <h2>First Child Selector</h2>
-                    <p>The first child selector is used instead of using class selectors or ID's.  When the first child selector is added to an element selector in CSS it styles the immediate first child of the element.</p>
-                    <p>In the example I am using the article element and putting the first-child selector directly after it.</p>
-                    <p class="demo">article:first-child {<br>
-                        color: red;<br>
-                    }<br></p>
-                    <p>In this example, the first-child selector is directly after the article element in the CSS.  In the HTML, whatever element is the direct child of article will have a font color of red.</p>
-                    <a class="source" href="https://css-tricks.com/almanac/selectors/f/first-child/">First Child</a>
-                </section>
-                <section>
                     <h2>Hover Selector</h2>
+                    <a class="source" href="https://css-tricks.com/almanac/selectors/h/hover/">Hover</a>
                     <p>For me personally, the hover selector is one of my favorite!  Its typically used with an anchor element and changes the properties of the element when the cursor is over it.</p>
                     <p>I have an anchor element with a hover attached to it in the example.</p>
                     <p class="demo">a:hover {<br>
@@ -51,57 +32,77 @@
                         text-decoration: underline;<br>
                     }<br></p>
                     <p>Here, when a user has their cursor over the anchor the text would change to a green color and the text would be underlined.</p>
-                    <a class="source" href="https://css-tricks.com/almanac/selectors/h/hover/">Hover</a>
                 </section>
                 <section>
-                    <h2>First-child Selector</h2>
-                    <p>The first-child selector is used along with another element, class, or id selector to target the immediate child within the parent element.  It is considered a "structural pseudo class" selector and it is used to style content based on the parent - child relationship.</p>
-                    <p>The first-child selector is mostly used to avoid using more class or id selectors.</p>
-                    <p class="demo">section:first-child {<br>
-                        color: darkblue;<br>
-                        font-family: Merriweather;<br>
+                    <h2>First Child Selector</h2>
+                    <a class="source" href="https://css-tricks.com/almanac/selectors/f/first-child/">First Child</a>
+                    <p>The first child selector is used instead of using class selectors or ID's.  When the first child selector is added to an element selector in CSS it styles the immediate first child of the element.</p>
+                    <p>In the example I am using the article element and putting the first-child selector directly after it.</p>
+                    <p class="demo">article:first-child {<br>
+                        color: red;<br>
                     }<br></p>
-                    <p>In the example, the first-child selector is calling out the immediate child of the section element.  It could be an h2, so on the web page it would make that heading stand out with a dark blue color and a different font than the rest of the page to let the user know that they are looking at a different area of text.</p> 
-                    <a class="source" href="https://css-tricks.com/almanac/selectors/f/first-child/">First-child</a>
+                    <p>In this example, the first-child selector is directly after the article element in the CSS.  In the HTML, whatever element is the direct child of article will have a font color of red.</p>
+                </section>
+                <section>
+                    <h2>is() Selector</h2>
+                    <a class="source" href="https://css-tricks.com/almanac/selectors/i/is/">is()</a>
+                    <p>The is() selector in CSS allows you to combine multiple easier than writing out every selector that you want to target together.  It is also considered a forgiving selector, which means that if there is an invalid selector, the invalid selector will be ignored and the code will still run.</p>
+                    <p>A user can use is() with any element to make styling the element easier.</p>
+                    <p class="demo">section :is(h1, h3, a) {<br>
+                        color: hotpink;<br>
+                        text-decoration: underline;<br>
+                    }<br></p>
+                    <p>In the example, all h1's, h3's and anchor content inside the section would have text that is hot pink and be underlined.</p>
+                </section>
+                <section>
+                    <h2>has() Selector</h2>
+                    <a class="source" href="https://css-tricks.com/almanac/selectors/h/has/">has()</a>
+                    <p>The has() selector works with elements that have other elements inside them.  Its a parent selector that can select the children inside the element.  Has() is a non-forgiving selector.  So if there is an invalid selector in the code, it will not run.</p>
+                    <p>There is a way to make has() a forgiving selector.  You can nest is() or where() inside of it and it will become forgiving.</p>
+                    <p class="demo">article:has(.some-class, h3, img) {<br>
+                        background: rgb(202, 8, 160);<br>
+                        opacity: 0.5;<br>
+                    }<br></p>
+                    <p>In the example, the elements inside the article (.someclass, h3, and img) will all have a background color in the shade of pink and and opacity of 50%.  As for has() being a non-forgiving selector, if there isn't a real class of "some-class", the has() selector would be invalid and not work.</p> 
                 </section>
                 <!-- Start of Property documentation and demo. -->
                 <section>
                     <h2>justify-content Property</h2>
+                    <a class="source" href="https://css-tricks.com/almanac/properties/j/justify-content/">justify-content</a>
                     <p>Justify-content aligns content along the main axis.  Its helps distribute all the extra free space that isn't being taken up evenly.  There are 6 values that can be used with justify-content: flex-start (default), flex-end, center, space-between, space-around, and space-evenly.  Flex-start lines content up to the left edge.  Flex-end starts content at the right edge.  Flex-center puts the content in the center with equal free space on the left and right.  Space-between has equal spacing between content. Space-around has equal space around the content and space-around has equal spacing in between content and equal space at the ends of the content.</p>
                     <p class="demo">section {<br>
                             justify-content: center;<br>
                         }<br></p>
                     <p>In the example the content in the section would be aligned in the center of the page with equal spacing on the left and right.</p>    
-                    <a class="source" href="https://css-tricks.com/almanac/properties/j/justify-content/">justify-content</a>
                 </section>
                 <section>
                     <h2>Z-index Property</h2>
+                    <a class="source" href="https://css-tricks.com/almanac/properties/z/z-index/">Z-index</a>
                     <p>Z-index is used for stacking items vertically that overlap.  There are a couple reasons why elements could overlap.  Negative margin, absolute positioning, or relative positioning could all be reasons elements could overlap.  Z-index could help with getting the element you want on top be in the correct position.</p>
                     <p class="demo">img {<br>
                         z-index: 999;<br>
                     }<br></p>
                     <p>Setting the image to a z-index to 999 will make sure that nothing is stacked on top of it.</p>
-                    <a class="source" href="https://css-tricks.com/almanac/properties/z/z-index/">Z-index</a>
                 </section>
                 <section>
                     <h2>Text-Stroke Property</h2>
+                    <a class="source" href="https://css-tricks.com/almanac/properties/t/text-stroke/">Text-stroke</a>
                     <p>Text-stroke is an experimental property.  It is a text decoration kind of like the text-shadow, that helps style text.  Instead of being a shadow behind the text, text-stoke outlines text and can have a custom thickness and color choice.  Because it is still experimental, it still needs to be used with the -webkit prefix.  </p>
                     <p>When writing the CSS code for text-stroke, it is really shorthand for 2 properties.  One being width and the other being color.  The width determines the thickness of the border around the text and the color is the color you want it to be.</p>
                     <p class="demo">header h1 {<br>
                         -webkit-text-stroke: 3px green;<br>
                     }<br></p>
                     <p>The CSS code would give the H1 in the header a text border of 3 pixels and color it green.  The width value can be entered in px, em, rem, ect.  The colors can be entered as hex, hsl, rgb, etc.</p>
-                    <a class="source" href="https://css-tricks.com/almanac/properties/t/text-stroke/">Text-stroke</a>
                 </section>
                 <section>
                     <h2>Disabled Property</h2>
+                    <a class="source" href="https://css-tricks.com/almanac/selectors/d/disabled/">Disabled</a>
                     <p>The disabled selector is used on buttons, input fields, text areas, options and fieldsets.  When used in the CSS, it disables the element.</p>
                     <p>In the example I used the disable selector with the input element and then used the background property to fill the input field with a solid color.</p>
                     <p class="demo">input:disabled {<br>
                         background: rgb(4, 27, 233);<br>
                     }<br></p>
                     <p>The the input element being disabled, the user can't input anything into the input box and the box is filled with a solid blue color.</p>
-                    <a class="source" href="https://css-tricks.com/almanac/selectors/d/disabled/">Disabled</a>
                 </section>
             </main>
                        
