@@ -27,11 +27,12 @@
                     <a class="source" href="https://css-tricks.com/almanac/selectors/h/hover/">Hover</a>
                     <p>For me personally, the hover selector is one of my favorite!  Its typically used with an anchor element and changes the properties of the element when the cursor is over it.</p>
                     <p>I have an anchor element with a hover attached to it in the example.</p>
-                    <p class="demo">a:hover {<br>
-                        color: green;<br>
-                        text-decoration: underline;<br>
+                    <p class="demo">.source:hover {<br>
+                        color: yellow;<br>
+                        text-decoration: underline;
+                        cursor: grab;<br>
                     }<br></p>
-                    <p>Here, when a user has their cursor over the anchor the text would change to a green color and the text would be underlined.</p>
+                    <p>The links to the sources on this page are all highlighted in yellow and underlines when you hover the cursor over them.  The cursor also changes to the grab icon.</p>
                 </section>
                 <section>
                     <h2>First Child Selector</h2>
@@ -90,9 +91,9 @@
                     <p>Text-stroke is an experimental property.  It is a text decoration kind of like the text-shadow, that helps style text.  Instead of being a shadow behind the text, text-stoke outlines text and can have a custom thickness and color choice.  Because it is still experimental, it still needs to be used with the -webkit prefix.  </p>
                     <p>When writing the CSS code for text-stroke, it is really shorthand for 2 properties.  One being width and the other being color.  The width determines the thickness of the border around the text and the color is the color you want it to be.</p>
                     <p class="demo">header h1 {<br>
-                        -webkit-text-stroke: 3px green;<br>
+                        -webkit-text-stroke: 3px rgb(226, 226, 244);<br>
                     }<br></p>
-                    <p>The CSS code would give the H1 in the header a text border of 3 pixels and color it green.  The width value can be entered in px, em, rem, ect.  The colors can be entered as hex, hsl, rgb, etc.</p>
+                    <p>For the example, I used the text-stroke property on the h1 in the header on this page to outline the text in an off-white border around the lettering.</p>
                 </section>
                 <section>
                     <h2>Disabled Property</h2>

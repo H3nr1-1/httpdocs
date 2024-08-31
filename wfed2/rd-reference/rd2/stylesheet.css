@@ -28,6 +28,7 @@ h1 {
     text-align: center;
     font-size: 2.5rem;
     text-decoration: underline rgb(226, 226, 244);
+    -webkit-text-stroke: 3px rgb(226, 226, 244);
 }
 
 section {
@@ -84,6 +85,7 @@ main{
 .source:hover{
     text-decoration: underline;
     color: yellow;
+    cursor: grab;
 }
 
 a {
