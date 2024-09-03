@@ -21,15 +21,17 @@ html {
     --color-black : hsl(0 0% 0%);
     --card-before: hsl(334,44%,54%);
     --card-after: hsl(216, 88%, 35%);
-    --gap : 1rem;
-    --header-h1-x : 0;
-    --header-h1-y : 0;
+    --gap: 1rem;
+    --header-hero: url(images/hero.webp);
+    --header-h1-x: translateX(0px);
+    --header-h1-y: translateY(0px);
     --footer-links : rgb(133, 126, 126);
     --transition-time: 0.5s;
+    --header-font:  "Spicy Rice", serif;
 }
 
 .envy {
-    --color-primary: hsl(123, 93%, 27%);
+    --color-primary: hsl(154, 75%, 45%);
     --color-secondary: hsl(99, 46%, 93%);
     --color-cta: hsl(80,60%,50%);
     --color-white : hsl(0 0% 100%);
@@ -38,9 +40,7 @@ html {
     --color-gray-dark : hsl(0 0% 40%);
     --color-black : hsl(0 0% 0%);
     --color-hue : 156;
-    --header-h1-x : 0;
-    --header-h1-y : calc(75px - 50%);
-    --header-font:  "Spicy Rice", serif;
+    --header-hero: url(images/envy-hero.webp);
 }
 
 .veerle {
@@ -53,9 +53,7 @@ html {
     --color-gray-dark : hsl(0 0% 40%);
     --color-black : hsl(0 0% 0%);
     --color-hue : 156;
-    --header-h1-x : 0;
-    --header-h1-y : calc(75px - 50%);
-    --header-font:  "Spicy Rice", serif;
+    --header-hero: url(images/veerle-hero.webp);
 }
 
 body {
@@ -71,11 +69,12 @@ body {
 }
 
 header, main, footer {
-    padding : 0 var(--gap);
+  padding : 0 var(--gap);
 }
 
 header {
     font-family: var(--header-font);
+    background: var(--header-hero) no-repeat center / cover;
     letter-spacing: 4px;
     height : 200px;
     padding : 20px 0;
