@@ -31,12 +31,19 @@
                 </div>
             </nav>
 
-            <h1>
-                <a href="<?php echo home_url() ?>">
-                    <?php bloginfo( 'name' ); ?>
-                    <span><?php bloginfo( 'description' ); ?></span>
-                </a>
-            </h1>
+
+            <div class="header-content">
+                <h1>
+                    <a href="<?php echo home_url() ?>">
+                        <?php bloginfo( 'name' ); ?>
+                        <span><?php bloginfo( 'description' ); ?></span>
+                    </a>
+                </h1>
+                <div class="header-content-ad">
+                    <?php get_sidebar( 'header' ); ?>
+                </div>
+
+            </div>
             <?php
             $nav_sub_header_bottom = array(
                 'theme_location' => 'nav-sub-header-bottom',
