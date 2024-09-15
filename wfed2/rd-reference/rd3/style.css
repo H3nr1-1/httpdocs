@@ -43,13 +43,13 @@ section h2 {
 }
 
 ul li{
+    margin: 0 auto;
     padding: 10px;
 }
 
 section p {
     padding: 20px;
     line-height: 1.8;
-    width: 65ch;
     margin: auto;
 }
 
@@ -100,9 +100,12 @@ section {
     margin-right: 100px;
 }
 
+section p{
+    width: 65ch;
+}
+
 ul li{
-    margin-left: 125px;
-    margin-right: 125px;
+    width: 65ch;
 }
 
 }
