@@ -1,0 +1,394 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior : smooth;
+}
+*, *::before, *::after {
+    box-sizing : inherit;
+}
+
+:root {
+    --color-primary:rgb(139, 219, 245);
+    --color-secondary: rgb(255, 219, 92);
+    --color-cta: rgb(235, 85, 191);
+    --color-off-white: rgb(241, 255, 217);
+    --color-gray-light: hsl(0 0% 96%);
+    --color-gray: hsl(0 0% 83%);
+    --color-gray-dark: hsl(0 0% 40%);
+    --color-black: hsl(0 0% 0%);
+    --font: "Roboto Mono", monospace;
+
+}
+
+body{
+    margin: 0 auto;
+    background: var(--color-off-white);
+}
+
+/* Lock body from scroll when hamburger menu is selected on mobile device. */
+body:has([aria-expanded='true']){
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Start of Main Navigation */
+nav{
+    box-shadow: 0 0 50px var(--color-cta);
+    font-family: var(--font) ;
+}
+
+.nav-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    line-height: 0;
+    z-index: 99;
+}
+
+.nav-main-menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    line-height: 0;
+}
+
+.nav-main-menu-toggle svg * {
+    transform-box: fill-box;
+}
+
+.nav-main-menu-toggle rect:nth-child(1) {
+    transition: all 2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    transform-origin: center;
+}
+
+.nav-main-menu-toggle rect:nth-child(2) {
+    transition: all 2.25s linear;
+    transform-origin: center;
+}
+
+.nav-main-menu-toggle rect:nth-child(3) {
+    transition: all 2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    transform-origin: center;
+}
+
+.nav-main-menu-toggle[aria-expanded="true"] rect:nth-child(1) {
+    rotate: 1.125turn;
+    translate: 0 10px;
+}
+
+.nav-main-menu-toggle[aria-expanded="true"] rect:nth-child(2) {
+    scale: 0;
+}
+
+.nav-main-menu-toggle[aria-expanded="true"] rect:nth-child(3) {
+    rotate: -1.125turn;
+    translate: 0 -10px;
+}
+
+#nav-main-menu {
+    transform: translateX(-100%);
+    transition: all 1s ease-in-out;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: hsl(212.45deg 50% 100% / 70%);
+    backdrop-filter: blur(10px);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    clip-path: inset(0px 0px -10px 0px);
+}
+
+#nav-main-menu:not([hidden]) {
+    visibility: visible;
+    transform: translateX(0);
+    transition: all 1.2s ease-in-out;
+}
+
+#nav-main-menu li a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
+    padding: 0 .5em;
+    font-size: 3em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all .25s ease-in-out;
+}
+
+#nav-main-menu li a:hover,
+#nav-main-menu li a:focus {
+    background: var(--color-cta);
+}
+
+#nav-main-menu li a:active {
+    transform: translateX(4px);
+    box-shadow: none;
+}
+
+/* END - .nav-main */
+
+
+header{
+    border: 1px solid var(--color-black);
+    border-bottom: 2px solid inset var(--color-black);
+    box-shadow: 0 0 20px var(--color-black);
+}
+
+header img{
+    width: 100%;
+}
+
+/* Start of Cards styling */
+.main-container {
+    padding: 30px;
+    font-family: var(--font);
+  }
+  
+  /* HEADING */
+  
+  .heading {
+    text-align: center;
+  }
+  
+  .heading__credits {
+    margin: 10px 0px;
+    color: var(--color-gray-dark);
+    font-size: 25px;
+    transition: all 0.5s;
+  }
+  
+  .heading__link {
+    text-decoration: none;
+  }
+  
+  .heading__credits .heading__link {
+    color: inherit;
+  }
+  
+  /* CARDS */
+  
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .card {
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    min-height: 200px;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+  }
+  
+  .card__link,
+  .card__exit,
+  .card__icon {
+    position: relative;
+    text-decoration: none;
+    color: var(--color-black);
+    text-shadow: 1px 1px var(--color-off-white);
+  }
+  
+  .card__link::after {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: all 0.5s;
+  }
+  
+  .card__link:hover::after {
+    width: 100%;
+  }
+  
+  .card__apply {
+    grid-row: 4/5;
+    align-self: center;
+    color: var(--color-black);
+    z-index: 2;
+  }
+  
+  /* CARD BACKGROUNDS */
+  
+  .card-1 {
+    background: url(images/design-print.webp) no-repeat center var(--color-primary);
+    background-size: 100%;
+  }
+  
+  .card-2 {
+    background: url(images/digital-media.webp) no-repeat center var(--color-primary);
+    background-size: 100%;
+  }
+  
+  .card-3 {
+    background: url(images/photography.webp) no-repeat center var(--color-primary);
+    background-size: 100%;
+  }
+  
+  .card-4 {
+    background: url(images/web-design.webp) no-repeat center var(--color-primary);
+    background-size: 100%;
+  }
+/* End of Cards */
+
+/* Start of Footer and links */
+footer{
+    font-family: var(--font);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 10px;
+    background: var(--color-black);
+    height: 5rem;
+}
+
+.link-left{
+    text-align: left;
+}
+
+.link-right{
+    display: flex;
+    gap: 10px;
+    text-align: right;
+}
+
+.foot-links a{
+    text-decoration: none;
+    font-size: 1.25em;
+    color: var(--color-off-white);
+    padding: 20px;
+}
+
+.foot-links a:hover{
+    border: 2px solid var(--color-white);
+    border-radius: 10px;
+    background: var(--color-gray-light);
+    color: var(--color-cta);
+}
+
+/* End of Footer and links */
+
+/* Making the navigation menu responsive */
+@media screen and (min-width:768px){
+     /*  ***Media Query for NAV***  */
+     .nav-main {
+        position: relative;
+        top: auto;
+        left: auto;
+        z-index: auto;
+        background: var(--color-black);
+    }
+    
+    #nav-main-menu {
+        position: relative;
+        text-align: center;
+        visibility: visible;
+        transform: translateX(0);
+        transition: none;
+        width: auto;
+        height: auto;
+        background: transparent;
+        backdrop-filter: none;
+        flex-direction: row;
+        justify-content: center;
+        box-shadow: none;
+        clip-path: none;
+    }
+
+    #nav-main-menu li a{
+        font-size: 1.5em;
+        font-weight: 700;
+        border: 2px solid var(--color-black);
+        border-radius: 5px;
+        background: var(--color-off-white);
+        box-shadow: 5px 5px var(--color-cta);
+    }
+    
+    .nav-main-menu-toggle {
+        display: none;
+    }
+    
+    #nav-main-menu:not([hidden]) {
+        border-top: none;
+        border-right: none;
+    }
+    /* End of NAV media query */
+}
+
+/* Making the navigation menu responsive */
+@media screen and (min-width:1025px){
+    /*  ***Media Query for NAV***  */
+    .nav-main {
+       position: relative;
+       top: auto;
+       left: auto;
+       z-index: auto;
+       background: var(--color-black);
+   }
+   
+   #nav-main-menu {
+       position: relative;
+       text-align: center;
+       visibility: visible;
+       transform: translateX(0);
+       transition: none;
+       width: auto;
+       height: auto;
+       background: transparent;
+       backdrop-filter: none;
+       flex-direction: row;
+       justify-content: center;
+       box-shadow: none;
+       clip-path: none;
+   }
+
+   #nav-main-menu li a{
+       margin-left: 15px;
+       margin-top: 10px;
+       font-size: 2em;
+       font-weight: 500;
+       box-shadow: 5px 5px var(--color-cta);
+   }
+   
+   .nav-main-menu-toggle {
+       display: none;
+   }
+   
+   #nav-main-menu:not([hidden]) {
+       border-top: none;
+       border-right: none;
+   }
+   /* End of NAV media query */
+   
+}
+
+@media (max-width: 1600px) {
+    .cards {
+      justify-content: center;
+    }
+  }
