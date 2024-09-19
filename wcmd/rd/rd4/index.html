@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css" type="text/css">
+    <title>4R - WP Template Function Hierarchy</title>
+</head>	
+	<body>
+
+		<div class="wrapper">
+
+            <header>
+                <h1>WP Template Function Hierarchy</h1>
+            </header>
+
+            <section>
+                <h2>The WordPress Hierarchy Structure</h2>
+                <p>The Wordpress hierarchy determines which template file to use when loading a web page.  Wordpress uses database to run its websites.  When a web page is called, the database is queried and Wordpress uses a query string to figure out which template to use.  Wordpress then goes through the template hierarchy to find a matching file.  If a match isn't found it keeps moving down through the hierarchy until it runs out of files to check.  At that point it uses the theme main template file, index.php.</p>
+            </section>
+
+            <section>
+                <h2>Template Hierarchy Order</h2>
+                <p>The order of the hierarchy on WordPress is:</p>
+                    <p>- Front Page: home.php<br>
+                    - Single Post: single-{post-type}-{slug}.php<br>
+                    - Category: category-{slug}.php<br>
+                    - Tag:  tag-{slug}.php<br>
+                    - Custom taxonomies: taxonomy-{taxonomy}-{term}.php<br>
+                    - Custom post types:  archive-{post_type}.php<br>
+                    - Author: author-{name}.php<br>
+                    - Date: date.php<br>
+                    - Search Results: search.php<br>
+                    - 404 error: 404.php</p>
+            </section>
+
+            <section>
+                <h2>File Naming Conventions</h2>
+                <p>WordPress uses strict naming practices for naming conventions.  They use all lower case words and connect words with hyphens.  This is done because it is more readable, better for SEO, and is a WordPress coding standard.</p>
+            </section>
+
+            <section>
+                <h2>Summary of Documentation</h2>
+                <p>The WordPress template hierarchy is how WordPress decides which templates to use for displaying a web page.  It starts by looking for a specific file, and if it doesn't find that file, it move on to more general files.  If it continues to not match the file its looking for it will automatically load the index.php file.  The order it checks depends on the content, like posts, pages, or categories.  You can use either slugs or Id's in file names.  Slugs are more human readable URL's and Id's are unique numbers.  Slugs are better for SEO and easier to manage while Id's are guaranteed to be unique.</p>
+            </section>
+
+			<footer class="foot-links">
+                    <a class="home" href="/wcmd/index.html">&copy; 2024 - Chris</a>
+					<a href="javascript:location='https://jigsaw.w3.org/css-validator/validator?uri='+escape(location)">CSS</a>
+					<a href="javascript:location='https://validator.w3.org/nu/?doc='+escape(location)">HTML</a>
+			</footer>
+
+		</div>
+
+	</body>
+</html>

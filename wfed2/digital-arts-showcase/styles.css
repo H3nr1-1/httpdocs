@@ -8,6 +8,7 @@
 html {
     scroll-behavior : smooth;
 }
+
 *, *::before, *::after {
     box-sizing : inherit;
 }
@@ -22,7 +23,9 @@ html {
     --color-gray-dark: hsl(0 0% 40%);
     --color-black: hsl(0 0% 0%);
     --font: "Roboto Mono", monospace;
-
+    --dur: all 550ms ease-in-out; 
+    --dur-a: all 650ms ease-in-out;
+    --dur-b: all 750ms ease-in-out;
 }
 
 body{
@@ -38,7 +41,6 @@ body:has([aria-expanded='true']){
 
 /* Start of Main Navigation */
 nav{
-    box-shadow: 0 0 50px var(--color-cta);
     font-family: var(--font) ;
 }
 
@@ -47,7 +49,7 @@ nav{
     top: 0;
     left: 0;
     line-height: 0;
-    z-index: 99;
+    z-index: 9;
 }
 
 .nav-main-menu-toggle {
@@ -94,7 +96,7 @@ nav{
 #nav-main-menu {
     transform: translateX(-100%);
     transition: all 1s ease-in-out;
-    position: relative;
+    position: absolute;
     width: 100vw;
     height: 100vh;
     background: hsl(212.45deg 50% 100% / 70%);
@@ -129,7 +131,7 @@ nav{
 
 #nav-main-menu li a:hover,
 #nav-main-menu li a:focus {
-    background: var(--color-cta);
+    background: var(--color-secondary);
 }
 
 #nav-main-menu li a:active {
@@ -139,15 +141,10 @@ nav{
 
 /* END - .nav-main */
 
-
-header{
-    border: 1px solid var(--color-black);
-    border-bottom: 2px solid inset var(--color-black);
-    box-shadow: 0 0 20px var(--color-black);
-}
-
 header img{
     width: 100%;
+    border-bottom: 2px solid var(--color-black);
+    box-shadow: 0 0 20px var(--color-black);
 }
 
 /* Start of Cards styling */
@@ -202,9 +199,7 @@ header img{
     transform: scale(1.01);
   }
   
-  .card__link,
-  .card__exit,
-  .card__icon {
+  .card__link {
     position: relative;
     text-decoration: none;
     color: var(--color-black);
@@ -218,7 +213,7 @@ header img{
     content: "";
     width: 0%;
     height: 3px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: var(--color-secondary);
     transition: all 0.5s;
   }
   
@@ -229,8 +224,6 @@ header img{
   .card__apply {
     grid-row: 4/5;
     align-self: center;
-    color: var(--color-black);
-    z-index: 2;
   }
   
   /* CARD BACKGROUNDS */
