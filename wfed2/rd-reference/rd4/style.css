@@ -27,7 +27,6 @@ header {
 h1 {
     text-align: center;
     font-size: 2.5rem;
-    text-decoration: underline rgb(226, 226, 244);
 }
 
 section {
@@ -40,11 +39,6 @@ section {
 section h2 {
     text-align: center;
     border-bottom: 3px solid rgb(226, 226, 244);
-}
-
-ul li{
-    margin: 0 auto;
-    padding: 10px;
 }
 
 section p {
