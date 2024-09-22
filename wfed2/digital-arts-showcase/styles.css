@@ -312,6 +312,30 @@ header img{
     color: var(--color-black);
     cursor: pointer;
   }
+
+  .card__button:hover {
+    background: var(--color-cta);
+    color: var(--color-off-white);
+  }
+
+  /* Animation for the card READ MORE button when clicked */
+  .card__button:active {
+    animation: .25s ease click;
+    cursor: grabbing;
+  }
+
+  @keyframes click {  
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.75);
+        box-shadow: none;
+    }
+    to {
+        transform: scale(1);
+    }
+}
   
   .card__button:focus {
     outline: 2px solid var(--color-black);
