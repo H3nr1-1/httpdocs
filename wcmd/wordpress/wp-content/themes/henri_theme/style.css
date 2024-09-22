@@ -624,6 +624,21 @@ figure img {
     flex-direction: column;
 }
 
+.widget .wp-block-tag-cloud {
+    position: relative;
+    padding: 20px;
+}
+
+.tag-cloud-link {
+    margin-top: 8px;
+    font-size: 1em !important;
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 2px 2px;
+    padding: 5px;
+
+}
+
 .search .size-thumbnail {
     float: left;
     padding: var(--grid-gap-half);
