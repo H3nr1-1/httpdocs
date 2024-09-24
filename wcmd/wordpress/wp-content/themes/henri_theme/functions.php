@@ -23,6 +23,8 @@ if ( ! function_exists( 'wcmd_after_setup_theme' ) ) :
         // Allow admin users add Featured Images
         add_theme_support( 'post-thumbnails' );
 
+        add_post_type_support( 'page', 'excerpt' );
+
         // Output HTML5 style HTML
         add_theme_support('html5', [
             'caption',

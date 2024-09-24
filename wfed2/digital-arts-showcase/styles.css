@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
+
 *{
     margin: 0;
     padding: 0;
@@ -197,6 +198,11 @@ header img{
     box-shadow: 6px 6px var(--color-cta);
     padding: 2em;
 }
+
+.heading__title {
+    font-size: 2em;
+    text-decoration: underline;
+}
   
 .heading__credits {
     margin: 10px 0px;
@@ -215,6 +221,21 @@ header img{
   
 .heading__credits .heading__link {
    color: inherit;
+}
+
+.target {
+    max-width: 65ch;
+    margin: auto;
+    margin-top: 20px;
+    border: 5px solid var(--color-black);
+    border-radius: 10px;
+    box-shadow: 6px 6px var(--color-cta);
+    padding: 2em;
+}
+
+.target h3{
+    text-align: center;
+    text-decoration: underline;
 }
 
 
@@ -242,7 +263,61 @@ header img{
     background-color: var(--color-primary);
     justify-self: center;
   }
+
+  .card-course-info {
+    display: grid;
+    place-items: center;
+    width: 80vw;
+    max-width: 21.875rem;
+    height: 28.125rem;
+    overflow: hidden;
+    border-radius: 0.625rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+    background-color: var(--color-primary);
+    justify-self: center;
+  }
+
+  /* Cards on the Archive page */
+  .card-archive-info {
+    display: grid;
+    place-items: center;
+    width: 80vw;
+    max-width: 21.875rem;
+    height: 28.125rem;
+    overflow: hidden;
+    border-radius: 0.625rem;
+    box-shadow: 0.5rem 0.5rem 0.75rem var(--color-cta);
+    background-color: var(--color-primary);
+    justify-self: center;
+  }
+
+  .archives {
+    border-radius: .5rem;
+    padding: 3rem;
+    box-shadow: .25rem .25rem .5rem var(--color-secondary);
+    background: var(--color-off-white);
+  }
+
+  .card-archive-info h2 {
+    text-align: center;
+    padding: 15px;
+  }
+
+  .card-archive-info ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--color-black);
+  }
+
+  .card-archive-info a:hover {
+    text-decoration: underline;
+    background: var(--color-cta);
+    border-radius: .25rem;
+  }
+/* End of the Cards on the Archive page */
   
+
   .card > * {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -436,7 +511,7 @@ footer{
 
 .foot-links a{
     text-decoration: none;
-    font-size: 1.25em;
+    font-size: 1em;
     color: var(--color-off-white);
     padding: 20px;
 }
@@ -523,6 +598,14 @@ footer{
         grid-column: span 4;
     }
 
+    .card-course-info {
+        grid-column: span 4;
+    }
+
+    .card-archive-info {
+        grid-column: span 4;
+    }
+
     .card__description{
         opacity: 0.5;
     }
@@ -591,8 +674,19 @@ footer{
         grid-column: span 4;
     }
 
+    .card-course-info {
+        grid-column: span 4;
+    }
+
+    .card-archive-info {
+        grid-column: span 4;
+    }
+
     .card__description{
         opacity: 0.5;
     }
 
 }
+
+
+

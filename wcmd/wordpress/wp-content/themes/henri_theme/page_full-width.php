@@ -1,4 +1,8 @@
 <?php
+/*
+Template Name: Full Width
+*/
+
 get_header();
 ?>
 <div class="main-content">
@@ -43,7 +47,7 @@ get_header();
         </ol>
     </main>
 
-    <?php get_sidebar(); ?>
+    <?php // NO SIDEBAR Full Width Layout get_sidebar(); ?>
 </div>
 
 <?php
