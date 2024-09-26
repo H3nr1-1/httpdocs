@@ -94,6 +94,14 @@ section {
     margin-right: 100px;
 }
 
+section h2 a {
+    color: black;
+}
+
+section h2 a:hover {
+    color: red;
+}
+
 section p{
     width: 65ch;
 }
