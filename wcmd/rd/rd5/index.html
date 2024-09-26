@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css" type="text/css">
+    <title>5R - WordPress Search</title>
+</head>	
+	<body>
+
+		<div class="wrapper">
+
+            <header>
+                <h1>WordPress Search</h1>
+            </header>
+
+            <section>
+                <h2>WordPress Search Functionality</h2>
+                <p>The search functionality of WordPress is pretty cool.  When a user types keywords into the search bar, WordPress searches just the website and matches content from titles, body, media titles, alt text, and file names.  It does not return any content from widgets, comments, or categories.</p>
+            </section>
+
+            <section>
+                <h2>The Role of URI</h2>
+                <p>When a search is submitted, the URI is updated.  When it is updated it puts together a query string to indicate what the search being used is.  The URI then helps WordPress determine what content to display to the user based on the keywords they entered.</p>
+            </section>
+
+            <section>
+                <h2>Current/ Active Search Terms</h2>
+                <p>When a search is entered, WordPress automatically provides the search terms through a global variable called get_search_query().  The variable get_search_query(), would be entered as a value to be echoed in the input field of the form.</p>
+            </section>
+
+            <section>
+                <h2>Summary of Documentation</h2>
+                <p>The way the WordPress handles allows searches on websites is a really cool design.  The functionality of the search takes the keyword or words that were entered and searches the website for those keywords used in the title, body, media titles, alt text and file names.  It then displays to the user what it found on the website.  The URI takes the submitted value and makes an updated query string.  That string is what helps Wordpress determine what content to display to the user.  After a search is submitted, WordPress creates a global variable called get_search_query(), which allows the user to see what the last search that was entered was.  The get_search_query() variable would be displayed in the search input box.</p>
+            </section>
+
+			<footer class="foot-links">
+                    <a class="home" href="/wcmd/index.html">&copy; 2024 - Chris</a>
+					<a href="javascript:location='https://jigsaw.w3.org/css-validator/validator?uri='+escape(location)">CSS</a>
+					<a href="javascript:location='https://validator.w3.org/nu/?doc='+escape(location)">HTML</a>
+			</footer>
+
+		</div>
+
+	</body>
+</html>
