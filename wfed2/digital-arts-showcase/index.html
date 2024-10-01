@@ -9,8 +9,10 @@
 	  <link rel="stylesheet" href="styles.css" type="text/css">
     <script defer src="script.js"></script>
     <title>Digital Arts Showcase - 2024</title>
-</head> 
-
+    <link rel="icon" href="images/my-logo.webp" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script>document.addEventListener('DOMContentLoaded', () => AOS.init({once:true}))</script></head> <!-- The AOS.init({once:true}) ensures that the animations will only happen once on the page and not multiple times as the user scrolls up and down.  -->
     <body>
 
         <nav class="nav-main">
@@ -36,10 +38,10 @@
         <!-- Start of Wrapper main content -->
         <div class="wrapper">
 
-            <aside class="aside-main">
+            <aside class="aside-main" data-aos="flip-left">
                 <div class="heading">
                     <h1 class="heading__title">2024 Digital Arts Showcase</h1>
-                    <p class="heading__credits"><a class="heading__link" target="_blank" href="https://nwtc.edu">Northeast Wisconsin Technical College</a></p>
+                    <p class="heading__credits"><a class="heading__link" target="_blank" href="https://nwtc.edu">- Northeast Wisconsin Technical College -</a></p>
                     <p>Thursday, December 12th 2024</p>
                     <p>4:30pm - 6:30pm</p>
                     <p>College of Business - Digital Arts Atrium</p>
@@ -48,7 +50,7 @@
 
             <main class="main-main">
                 <div class="cards">
-                    <div class="card">
+                    <div class="card" data-aos="fade-down-right" data-aos-delay="300">
                         <img
                           class="card__background"
                           src="images/design-print-card.webp" alt="The image of the Design Print logo for the Digital Showcase for 2024.">
@@ -56,13 +58,13 @@
                           <div class="card__content--container | flow">
                             <h2 class="card__title">Design - Print</h2>
                             <p class="card__description">
-                              Creative design professionals combine artistic abilities with technical knowledge to create designs used in print and digital content.
+                              Where imagination meets art, and style takes flight!
                             </p>
                           </div>
-                          <a class="card__button" href="#">Read more</a>
+                          <a class="card__button" href="design-print.html">Read more</a>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-aos="fade-down-left" data-aos-delay="300">
                         <img
                           class="card__background"
                           src="images/photography-card.webp" alt="The image of the Photography logo for the Digital Showcase for 2024.">
@@ -70,13 +72,13 @@
                           <div class="card__content--container | flow">
                             <h2 class="card__title">Photography</h2>
                             <p class="card__description">
-                              The photography graduates will be skilled in the latest lighting, software, output, and digital photography technologies necessary to succeed in this creative profession.
+                              Creativity meets reality, and a single frame can speak a thousand words!
                             </p>
                           </div>
-                          <a class="card__button" href="#">Read more</a>
+                          <a class="card__button" href="photography.html">Read more</a>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-aos="fade-up-right" data-aos-delay="300">
                         <img
                           class="card__background"
                           src="images/web-design-card.webp" alt="The image of the Web Design logo for the Digital Showcase for 2024.">
@@ -84,13 +86,13 @@
                           <div class="card__content--container | flow">
                             <h2 class="card__title">Web Design</h2>
                             <p class="card__description">
-                              Web design focuses on front-end design and development of a website.  Use HTML and CSS to design the user interface (UI) while implementing design concepts to enhance the use experience (UX).
+                              Technology meets artistry, making the web not just functional but fun and engaging!
                             </p>
                           </div>
-                          <a class="card__button" href="#">Read more</a>
+                          <a class="card__button" href="web-design.html">Read more</a>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" data-aos="fade-up-left" data-aos-delay="300">
                         <img
                           class="card__background"
                           src="images/digital-media-card.webp" alt="The image of the Digital Media logo for the Digital Showcase for 2024.">
@@ -98,10 +100,10 @@
                           <div class="card__content--container | flow">
                             <h2 class="card__title">Digital Media</h2>
                             <p class="card__description">
-                              Digital media professionals employs productions skills and acquired technical knowledge to create video, audio, and motion graphics content for multiple distribution channels.
+                              The ultimate tool for capturing attention and sparking conversations in our connected world!
                             </p>
                           </div>
-                          <a class="card__button" href="#">Read more</a>
+                          <a class="card__button" href="digital-media.html">Read more</a>
                         </div>
                     </div>
                 </div>
@@ -115,8 +117,9 @@
                     <a href="/index.html">&copy; 2024 - Chris</a>
                 </div>
                 <div class="link-right">
-                    <a href="javascript:location='https://jigsaw.w3.org/css-validator/validator?uri='+escape(location)">CSS</a>
-                    <a href="javascript:location='https://validator.w3.org/nu/?doc='+escape(location)">HTML</a>
+                  <a href="documentation.html">DOCS</a>
+                  <a href="javascript:location='https://jigsaw.w3.org/css-validator/validator?uri='+escape(location)">CSS</a>
+                  <a href="javascript:location='https://validator.w3.org/nu/?doc='+escape(location)">HTML</a>
                 </div>
             </footer>
 

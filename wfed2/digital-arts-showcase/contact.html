@@ -6,9 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <link rel="stylesheet" href="styles.css" type="text/css">
+	<link rel="stylesheet" href="styles.css" type="text/css">
     <script defer src="script.js"></script>
     <title>Digital Arts Showcase - 2024</title>
+    <link rel="icon" href="images/my-logo.webp" type="image/x-icon">
 </head> 
 
     <body>
@@ -36,7 +37,44 @@
         <!-- Start of Wrapper main content -->
         <div class="wrapper">
 
-
+            <div class="main-main grid-12">
+                <div class="grid-12-span-12">
+                    <h2>Directions</h2>
+                    <form action="https://maps.google.com/maps">
+                        <div class="grid-12">
+                            <label class="grid-12-span-12" for="saddr">Enter Your Address or Zip Code</label>
+                            <input class="grid-12-span-1-10" id="saddr" name="saddr" required placeholder="Enter Your Address or Zip Code">
+                            <input type="hidden" name="daddr" value="2740 West Mason Street, Green Bay, WI">
+                            <input class="grid-12-span-10-12" type="submit" value="Go">
+                        </div>
+                    </form>
+                    <div id="map"></div>
+                    <h2>Contact Us</h2>
+                    <form class="expanded row clearfix" method="post">
+                        <ol class="grid-12">
+                            <li class="grid-12-span-1-6">
+                                <label for="name-first">First Name</label>
+                                <input id="name-first" name="name-first" required placeholder="Enter your first name">
+                            </li>
+                            <li class="grid-12-span-6-12">
+                                <label for="name-last">Last Name</label>
+                                <input id="name-last" name="name-last" required placeholder="Enter your last name">
+                            </li>
+                            <li class="grid-12-span-12">
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="email" required placeholder="Enter your email address">
+                            </li>
+                            <li class="grid-12-span-12">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
+                            </li>
+                            <li>
+                                <input class="submit" name="submit" type="submit" value="Contact Us">
+                            </li>
+                        </ol>
+                    </form>
+                </div>
+            </div>
 
         </div>
         <!-- End of the Wrapper -->
@@ -46,6 +84,7 @@
                     <a href="/index.html">&copy; 2024 - Chris</a>
                 </div>
                 <div class="link-right">
+                    <a href="documentation.html">DOCS</a>
                     <a href="javascript:location='https://jigsaw.w3.org/css-validator/validator?uri='+escape(location)">CSS</a>
                     <a href="javascript:location='https://validator.w3.org/nu/?doc='+escape(location)">HTML</a>
                 </div>
