@@ -7,12 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles.css" type="text/css">
-    <script defer src="script.js"></script>
     <title>Digital Arts Showcase - 2024</title>
     <link rel="icon" href="images/my-logo.webp" type="image/x-icon">
+    <!-- Google Font - Roboto Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!-- Load Headroom.js -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.12.0/headroom.min.js" integrity="sha512-9UsrKTYzS9smDm2E58MLs0ACtOki+UC4bBq4iK5wi7lJycwqcaiHxr1bdEsIVoK0l5STEzLUdYyDdFQ5OEjczw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Load AOS.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script>document.addEventListener('DOMContentLoaded', () => AOS.init({once:true}))</script></head>
+    <!-- Load Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.min.css">
+    <!-- Load Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.min.js"></script>
+    <script defer src="script.js"></script>
 </head> 
 
     <body>
@@ -40,12 +49,32 @@
         <!-- Start of Wrapper main content -->
         <div class="wrapper">
 
-            <aside class="aside-main">
+            <aside class="aside-main" data-aos="flip-top" >
                 <img src="images/web-design.webp" alt="The showcase logo for web design.">
             </aside>
 
             <main class="main-main">
-
+                <div class="grid-12">
+                    <div class="grid-12-span-1-10" data-aos="fade-left">
+                        <p class="program-content">The Web Design Technician technical diploma focuses on the front-end design and development of a website. Use HTML, CSS, and JavaScript to design the user interface (UI) while implementing design concepts to enhance the user experience (UX). This technical diploma is a great fit for design students looking to become a front-end web developer or back-end developers looking to become a full-stack developer. All credits from this technical diploma can be applied to meet requirements in the Web Development Associate Degree program.</p>
+                    </div>
+                    <div class="grid-12-span-7-12" data-aos="fade-left">
+                        <a data-fancybox href="images/web-design-2.5.webp">
+                            <img class="program-images" src="images/web-design-2.webp" alt="A photo of an entrant from the 2024 Spring Digital Art Showcase.">
+                        </a>
+                    </div>
+                    <div class="grid-12-span-1-8" data-aos="fade-right" data-aos-delay="500">
+                        <p class="program-content">A Web Designer creates and oversees all visual aspects of websites. Web Designers plan, ideate, create, and build websites and web pages, many of which combine a number of visual elements including text, photos, graphics, and video clips. A Web Designer also oversees the design and layout, which can mean working on a brand new website or updating existing pages.</p>
+                    </div>
+                    <div class="grid-12-span-6-10" data-aos="fade-right" data-aos-delay="500">
+                        <a data-fancybox href="images/web-design-1.5.webp">
+                            <img class="program-images" src="images/web-design-1.webp" alt="A photo of a student that participated in the Spring 2024 Digital Arts Showcase.">
+                        </a>
+                    </div>
+                    <div class="grid-12-span-4-10">
+                        <p class="program-content">If you would like to learn more about this program or how you could enroll and get started, click <a class="program-link" href="https://www.nwtc.edu/academics-and-training/Web-Design-Technician">here</a>.</p>
+                    </div>
+                </div>
             </main>
 
         </div>
@@ -57,6 +86,7 @@
                 </div>
                 <div class="link-right">
                     <a href="documentation.html">DOCS</a>
+                    <a href="javascript:void(window.open('https://wave.webaim.org/report?url=%27+escape(window.location)))">WAVE</a>
                     <a href="javascript:location='https://jigsaw.w3.org/css-validator/validator?uri='+escape(location)">CSS</a>
                     <a href="javascript:location='https://validator.w3.org/nu/?doc='+escape(location)">HTML</a>
                 </div>

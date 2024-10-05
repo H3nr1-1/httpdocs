@@ -126,3 +126,35 @@ function init() {
     });
     infowindow.open(map, marker);
 }
+
+//Headroom Navigation 
+/**
+ * Headroom.js
+ * Hide the navigation bar when scrolling down and show it when scrolling up
+ * - https://wicky.nillia.ms/headroom.js/
+ * elNavMain
+ * - the navigation element to hide/show
+ * - has the class .nav-main
+ * headroom
+ * - the instance of Headroom
+ */
+const elNavMain = document.querySelector(".nav-main");
+const headroomNav = new Headroom(elNavMain);
+headroomNav.init();
+
+// JavaScript for FancyBox
+/**
+ * Fancybox Integration
+ * Fancyapps Fancybox is a lightbox library that can be used to display images
+ * Look for elements with the data-fancybox attribute
+ * and bind Fancybox to them.
+ * User can click on an anchor element with the data-fancybox attribute
+ * to open the image in a lightbox.
+ * @argument {string} [data-fancybox] - The data attribute to bind Fancybox to
+ * @argument {object} [options] - Custom options for Fancybox
+ */
+if (typeof Fancybox === "function") {
+    Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+    });
+}
