@@ -3,15 +3,13 @@ get_header();
 ?>
 <div class="main-content">
     <main>
-        <?php if (is_home()) get_template_part('template-parts/slider', 'index', ['cat' => 21, 'posts_per_page' => 3]) ?>
+        <?php get_search_form(); ?>
+        <h2><?php _e ( 'You are searching for "' . get_search_query() . '"' ); ?></h2>
 
         <ol class="cards">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <li class="card">
                 <a class="card-link" href="<?php the_permalink(); ?>" title="Read More About:  <?php the_title_attribute(); ?>">
-                    <figure class="card-figure">
-                        <?php the_post_thumbnail(); ?>
-                    </figure>
                     <section class="card-section">
                         <h2 class="card-section-title"><?php the_title(); ?></h2>
                         <div class="card-section-meta">
@@ -20,6 +18,7 @@ get_header();
                             <span class="card-section-meta-comments"><?php comments_number( '0 comments', 'only 1 comment', '% comments' ); ?></span>
                         </div>
                         <div class="card-section-excerpt">
+                            <?php the_post_thumbnail('thumbnail'); ?>
                             <?php the_excerpt(); ?>
                         </div>
                         <span class="card-section-button">Read More&hellip;</span>
@@ -32,10 +31,10 @@ get_header();
                 <?php endif; ?>
             </li>
         </ol>
-    <?php if( $wp_query->max_num_pages > 1 ) { ?>
-    <?php wcmd_paginate(); ?>
-    <?php } ?>
-</main>
+            <?php if( $wp_query->max_num_pages > 1 ) { ?>
+            <?php wcmd_paginate(); ?>
+            <?php } ?>
+    </main>
 
     <?php get_sidebar(); ?>
 </div>

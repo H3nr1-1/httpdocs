@@ -3,12 +3,10 @@ get_header();
 ?>
 <div class="main-content">
     <main>
-        <?php if (is_home()) get_template_part('template-parts/slider', 'index', ['cat' => 21, 'posts_per_page' => 3]) ?>
-
         <ol class="cards">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <li class="card">
-                <a class="card-link" href="<?php the_permalink(); ?>" title="Read More About:  <?php the_title_attribute(); ?>">
+                <div>
                     <figure class="card-figure">
                         <?php the_post_thumbnail(); ?>
                     </figure>
@@ -20,22 +18,19 @@ get_header();
                             <span class="card-section-meta-comments"><?php comments_number( '0 comments', 'only 1 comment', '% comments' ); ?></span>
                         </div>
                         <div class="card-section-excerpt">
-                            <?php the_excerpt(); ?>
+                            <?php the_content(); ?>
                         </div>
-                        <span class="card-section-button">Read More&hellip;</span>
+
                     </section>
-                </a>
+                </div>
                 <?php endwhile; else: ?>
                 <section class="card-section">
-                    <p class="card-section-excerpt"><?php _e( 'Sorry, no posts matched your criteria!' ); ?></p>
+                    <p class="card-section-excerpt"><?php _e( 'Sorry, nothing to see here!' ); ?></p>
                 </section>
                 <?php endif; ?>
             </li>
         </ol>
-    <?php if( $wp_query->max_num_pages > 1 ) { ?>
-    <?php wcmd_paginate(); ?>
-    <?php } ?>
-</main>
+    </main>
 
     <?php get_sidebar(); ?>
 </div>

@@ -3,14 +3,21 @@ get_header();
 ?>
 <div class="main-content">
     <main>
-        <?php if (is_home()) get_template_part('template-parts/slider', 'index', ['cat' => 21, 'posts_per_page' => 3]) ?>
-
+        <h2>
+            <?php
+            if( is_day() ) _e( 'You are viewing the ' .  get_the_date() . ' daily archives' );
+            elseif ( is_month() ) _e( 'You are viewing the ' . get_the_date( 'F Y' ) . ' monthly archives' );
+            elseif ( is_year() ) _e( 'You are viewing the ' . get_the_date( 'Y' ) . ' yearly archives' ); 
+            elseif ( is_author() ) _e( 'You are viewing the ' . get_the_author() . ' archives' ); 
+            else _e( 'You are viewing the "'. single_cat_title( '', false ) . '" Archives' );
+            ?>
+        </h2>
         <ol class="cards">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <li class="card">
                 <a class="card-link" href="<?php the_permalink(); ?>" title="Read More About:  <?php the_title_attribute(); ?>">
                     <figure class="card-figure">
-                        <?php the_post_thumbnail(); ?>
+                        <?php the_post_thumbnail('card'); ?>
                     </figure>
                     <section class="card-section">
                         <h2 class="card-section-title"><?php the_title(); ?></h2>
@@ -31,11 +38,11 @@ get_header();
                 </section>
                 <?php endif; ?>
             </li>
-        </ol>
-    <?php if( $wp_query->max_num_pages > 1 ) { ?>
-    <?php wcmd_paginate(); ?>
-    <?php } ?>
-</main>
+            </ol>
+        <?php if( $wp_query->max_num_pages > 1 ) { ?>
+        <?php wcmd_paginate(); ?>
+        <?php } ?>
+    </main>
 
     <?php get_sidebar(); ?>
 </div>
