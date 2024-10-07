@@ -3,14 +3,14 @@ get_header();
 ?>
 <div class="main-content">
     <main>
-        <?php if (is_home()) get_template_part('template-parts/slider', 'index', ['cat' => 21, 'posts_per_page' => 3]) ?>
+        <?php if (is_home()) get_template_part('template-parts/slider', 'index', ['cat' => 26, 'posts_per_page' => 4]) ?>
 
         <ol class="cards">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <li class="card">
                 <a class="card-link" href="<?php the_permalink(); ?>" title="Read More About:  <?php the_title_attribute(); ?>">
                     <figure class="card-figure">
-                        <?php the_post_thumbnail(); ?>
+                        <?php the_post_thumbnail('card-small'); ?>
                     </figure>
                     <section class="card-section">
                         <h2 class="card-section-title"><?php the_title(); ?></h2>
@@ -32,10 +32,10 @@ get_header();
                 <?php endif; ?>
             </li>
         </ol>
-    <?php if( $wp_query->max_num_pages > 1 ) { ?>
-    <?php wcmd_paginate(); ?>
-    <?php } ?>
-</main>
+        <?php if( $wp_query->max_num_pages > 1 ) { ?>
+        <?php wcmd_paginate(); ?>
+        <?php } ?>
+    </main>
 
     <?php get_sidebar(); ?>
 </div>

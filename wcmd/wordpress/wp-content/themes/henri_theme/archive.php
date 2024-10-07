@@ -38,7 +38,7 @@ get_header();
                 </section>
                 <?php endif; ?>
             </li>
-            </ol>
+        </ol>
         <?php if( $wp_query->max_num_pages > 1 ) { ?>
         <?php wcmd_paginate(); ?>
         <?php } ?>

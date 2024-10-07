@@ -1,6 +1,6 @@
 /*
-Theme Name: Web CMD
-Theme URI: https://chenrickson.bitweb1.nwtc.edu
+Theme Name: Web CMD - 06 - f-six
+Theme URI: https://chenrickson1.bitweb1.nwtc.edu
 
 Author: Chris Henrickson
 Author URI: https://chenrickson.bitweb1.nwct.edu
@@ -8,10 +8,10 @@ Author URI: https://chenrickson.bitweb1.nwct.edu
 Description: Web CMD Theme
 Tags: two-column
 
-Version: 1.0
+Version: 1.0.0
 
 Requires at least: 5.0
-Tested up to: 5.4
+Tested up to: 6.0
 Requires PHP: 7.0
 
 License: GNU GPU
@@ -21,6 +21,10 @@ Text Domain: wcmd
 
 General comments (optional).
 */
+
+
+/* =WordPress Core
+-------------------------------------------------------------- */
 .alignnone {
     margin: 5px 20px 20px 0;
 }
@@ -167,16 +171,16 @@ a img.aligncenter {
 
 :root {
     --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    --color-main: hsl(216, 29%, 50%);
-    --color-main-a20: hsla(215, 50%, 50%, 0.2);
-    --color-main-a40: hsla(220, 50%, 50%, 0.4);
-    --color-main-a60: hsla(217, 50%, 50%, 0.6);
-    --color-main-a80: hsla(213, 50%, 50%, 0.8);
-    --color-font-dark: hsl(226, 52%, 5%);
-    --color-font-light: hsl(220, 3%, 81%);
-    --color-font-light-a40: hsl(60, 3%, 81%, .4);
-    --color-font-light-a60: hsl(60, 3%, 81%, .6);
-    --color-font-light-a80: hsl(60, 3%, 81%, .8);
+    --color-main: hsl(225, 50%, 50%);
+    --color-main-a20: hsl(225, 50%, 50%, .2);
+    --color-main-a40: hsl(225, 50%, 50%, .4);
+    --color-main-a60: hsl(225, 50%, 50%, .6);
+    --color-main-a80: hsl(225, 50%, 50%, .8);
+    --color-font-dark: hsl(225, 50%, 5%);
+    --color-font-light: hsl(0, 0%, 100%);
+    --color-font-light-a40: hsl(0, 0%, 100%, .4);
+    --color-font-light-a60: hsl(0, 0%, 100%, .6);
+    --color-font-light-a80: hsl(0, 0%, 100%, .8);
     --nav-main-height: 64px;
     --grid-columns-12: repeat(12, 1fr);
     --grid-columns-8: repeat(8, 1fr);
@@ -253,10 +257,6 @@ header h1 span {
     display: none;
 }
 
-#custom-header {
-    display: none;
-}
-
 .nav-main ul,
 .nav-sub ul {
     list-style: none;
@@ -309,11 +309,6 @@ header h1 span {
 
 main form {
     display: flex;
-    flex-direction: column;
-}
-
-main form label {
-    display: block;
 }
 
 .nav-main-drawer form>label,
@@ -496,6 +491,7 @@ figure img {
 
 .cards .card {
     overflow: hidden;
+    /*    display: flex;*/
 }
 
 .home .cards .card,
@@ -534,6 +530,7 @@ figure img {
 
 .cards .card-link:hover .card-figure img {
     transform: rotate(8deg) scale(2);
+    /* filter: grayscale(0); */
 }
 
 .cards .card-figure-caption {
@@ -624,6 +621,10 @@ figure img {
     flex-direction: column;
 }
 
+.widget:first-child {
+    margin-top: 0;
+}
+
 .widget .wp-block-tag-cloud {
     position: relative;
     padding: 20px;
@@ -636,7 +637,6 @@ figure img {
     border-radius: 10px;
     box-shadow: 2px 2px;
     padding: 5px;
-
 }
 
 .search .size-thumbnail {
@@ -644,15 +644,6 @@ figure img {
     padding: var(--grid-gap-half);
     border: 1px solid;
     margin: 0 var(--grid-gap-half) var(--grid-gap-half) 0;
-}
-
-.error404 main .cards {
-    background: no-repeat right 0 / contain url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQBAMAAAAVaP+LAAAAGFBMVEUAAABTU1NNTU1TU1NPT09SUlJSUlJTU1O8B7DEAAAAB3RSTlMAoArVKvVgBuEdKgAAAJ1JREFUeF7t1TEOwyAMQNG0Q6/UE+RMXD9d/tC6womIFSL9P+MnAYOXeTIzMzMzMzMzaz8J9Ri6HoITmuHXhISE8nEh9yxDh55aCEUoTGbbQwjqHwIkRAEiIaG0+0AA9VBMaE89Rogeoww936MQrWdBr4GN/z0IAdQ6nQ/FIpRXDwHcA+JIJcQowQAlFUA0MfQpXLlVQfkzR4igS6ENjknm/wiaGhsAAAAASUVORK5CYII=);
-}
-
-.footer-lower {
-    background-color: var(--color-main-a60);
-    color: var(--color-font-dark);
 }
 
 @media screen and (min-width: 768px) {
@@ -704,6 +695,7 @@ figure img {
     }
 
     .header-content-ad {
+        display: block;
         padding: 0 var(--grid-gap);
         grid-column: span 5;
         display: flex;
@@ -711,12 +703,6 @@ figure img {
     }
 
     .header-content-ad img {
-        object-fit: contain;
-        max-width: 100%;
-    }
-
-    #custom-header {
-        display: block;
         object-fit: contain;
         max-width: 100%;
     }

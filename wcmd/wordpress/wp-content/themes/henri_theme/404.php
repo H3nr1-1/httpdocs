@@ -24,8 +24,9 @@ get_header();
                     </section>
                 </div>
                 <?php endwhile; else: ?>
-                <section class="card-section">
-                    <p class="card-section-excerpt"><?php _e( 'Sorry, nothing to see here!' ); ?></p>
+                <section class="error-404">
+                    <p class="card-section-excerpt"><?php _e( 'Oops, something broke!!!' ); ?></p>
+                    <img class="error-message" src="/wcmd/wordpress/wp-content/themes/henri_theme/images/404.error.webp" alt="404 error message">
                 </section>
                 <?php endif; ?>
             </li>

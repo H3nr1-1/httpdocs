@@ -31,9 +31,9 @@ get_header();
                 <?php endif; ?>
             </li>
         </ol>
-            <?php if( $wp_query->max_num_pages > 1 ) { ?>
-            <?php wcmd_paginate(); ?>
-            <?php } ?>
+        <?php if( $wp_query->max_num_pages > 1 ) { ?>
+        <?php wcmd_paginate(); ?>
+        <?php } ?>
     </main>
 
     <?php get_sidebar(); ?>
