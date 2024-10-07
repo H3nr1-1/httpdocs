@@ -16,9 +16,11 @@
     <!-- Load aos.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <script>document.addEventListener('DOMContentLoaded', () => AOS.init({once:true}))</script></head> <!-- The AOS.init({once:true}) ensures that the animations will only happen once on the page and not multiple times as the user scrolls up and down.  -->
-
+    <script>document.addEventListener('DOMContentLoaded', () => AOS.init({once:true}))</script>
+    <!-- The AOS.init({once:true}) ensures that the animations will only happen once on the page and not multiple times as the user scrolls up and down.  -->
     <script defer src="script.js"></script>
+</head>
+
     <body>
  
         <nav class="nav-main">
@@ -120,12 +122,17 @@
         
             <footer class="foot-links footer-main">
                 <div class="link-left">
+                  <!-- Link to return to home of my NWTC website -->
                     <a href="/index.html">&copy; 2024 - Chris</a>
                 </div>
                 <div class="link-right">
+                  <!-- HTML documentation project summary -->
                   <a href="documentation.html">DOCS</a>
+                  <!-- WAVE A11Y link -->
                   <a href="javascript:void(window.open('https://wave.webaim.org/report?url=%27+escape(window.location)))">WAVE</a>
+                  <!-- CSS Validation Link -->
                   <a href="javascript:location='https://jigsaw.w3.org/css-validator/validator?uri='+escape(location)">CSS</a>
+                  <!-- HTML Validation Link -->
                   <a href="javascript:location='https://validator.w3.org/nu/?doc='+escape(location)">HTML</a>
                 </div>
             </footer>
