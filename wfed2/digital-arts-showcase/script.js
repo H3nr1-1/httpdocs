@@ -158,3 +158,4 @@ if (typeof Fancybox === "function") {
         // Your custom options
     });
 }
+
