@@ -242,40 +242,41 @@ header img{
 
 /* 404 page */
 .error-page {
-    background: url("images/balloons-background.webp") no-repeat center;
-    background-size: cover;
     justify-self: center;
     border-radius: 1em;
     box-shadow: 5px 5px 10px var(--color-cta);
 }
 
 .error-page h1 {
-    text-shadow: 1px 1px var(--color-primary);
+    text-shadow: 2px 2px var(--color-primary);
     text-align: center;
-    font-size: 1.6em;
-}
-
-.error-page h2 {
-    text-shadow: 1px 1px var(--color-primary);
-    text-align: center;
-    font-size: 1.2em;
+    font-size: 2em;
 }
 
 .error-page p {
     margin: 0;
-    padding: 10px;
+    padding: 2em;
 }
 
 .error-page a {
     text-decoration: none;
     text-align: center;
     color: var(--color-special-link);
+    font-size: 1.5em;
 }
 
 .error-page a:hover {
     background: var(--color-secondary);
     cursor: grabbing;
     text-decoration: underline;
+}
+
+video {
+    max-width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 1em;
+    box-shadow: 0 0 3em;
 }
 
 /* END 404 page */
