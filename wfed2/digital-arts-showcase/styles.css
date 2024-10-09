@@ -241,10 +241,14 @@ header img{
 }
 
 /* 404 page */
+.error{
+    background: var(--color-black);
+}
+
 .error-page {
     justify-self: center;
-    border-radius: 1em;
-    box-shadow: 5px 5px 10px var(--color-cta);
+    background: var(--color-black);
+    color: var(--color-off-white);
 }
 
 .error-page h1 {
@@ -261,12 +265,11 @@ header img{
 .error-page a {
     text-decoration: none;
     text-align: center;
-    color: var(--color-special-link);
+    color: var(--color-secondary);
     font-size: 1.5em;
 }
 
 .error-page a:hover {
-    background: var(--color-secondary);
     cursor: grabbing;
     text-decoration: underline;
 }
@@ -275,8 +278,6 @@ video {
     max-width: 100%; 
     height: auto; 
     object-fit: cover; 
-    border-radius: 1em;
-    box-shadow: 0 0 3em;
 }
 
 /* END 404 page */
@@ -887,20 +888,15 @@ footer{
     /* 404 ERROR page */
 
     .error-page {
-        border: 5px solid var(--color-black);
         padding: 2em;
-        margin-bottom: 2em;
     }
     
     .error-page h1 {
-        font-size: 2em;
-    }
-    
-    .error-page h2 {
-        font-size: 1.4em;
+        font-size: 3em;
     }
     
     .error-page p {
+        font-size: 1.4em;
         text-align: center;
     }
 
