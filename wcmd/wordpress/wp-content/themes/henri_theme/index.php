@@ -3,7 +3,7 @@ get_header();
 ?>
 <div class="main-content">
     <main>
-        <?php if (is_home()) get_template_part('template-parts/slider', 'index', ['cat' => 26, 'posts_per_page' => 4]) ?>
+        <?php if (is_home()) get_template_part('template-parts/slider', 'index', ['cat' => 27, 'posts_per_page' => 4]) ?>
 
         <ol class="cards">
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
