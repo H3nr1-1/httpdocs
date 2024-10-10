@@ -377,6 +377,7 @@ video {
     text-align: center;
     padding: 10px;
     color: var(--color-special-link);
+    font-weight: 900;
 }
 
 .program-info .archive:hover {

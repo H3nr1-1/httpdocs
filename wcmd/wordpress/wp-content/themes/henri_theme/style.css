@@ -639,6 +639,18 @@ figure img {
     padding: 5px;
 }
 
+.error-404 p {
+	text-align: center;
+	font-size: 3em;
+	font-weight: bolder;
+	text-shadow: 2px 2px lightblue;
+}
+
+.error-message {
+	width:100%;
+	border-radius: 1em;
+}
+
 .search .size-thumbnail {
     float: left;
     padding: var(--grid-gap-half);
