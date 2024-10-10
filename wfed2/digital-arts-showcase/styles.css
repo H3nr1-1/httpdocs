@@ -371,47 +371,23 @@ video {
     padding: 1em;
 }
 
-/*  End of the information cards on the Programs page */
-
-  /* Cards on the Archive page */
-.card-archive-info {
-    display: grid;
-    place-items: center;
-    width: 80vw;
-    max-width: 21.875rem;
-    height: 28.125rem;
-    overflow: hidden;
-    border-radius: 0.625rem;
-    box-shadow: 0.5rem 0.5rem 0.75rem var(--color-cta);
-    background-color: var(--color-primary);
-    justify-self: center;
-}
-
-.archives {
-    border-radius: .5rem;
-    padding: 3rem;
-    box-shadow: .25rem .25rem .5rem var(--color-secondary);
-    background: var(--color-off-white);
-}
-
-.card-archive-info h2 {
-    text-align: center;
-    padding: 15px;
-}
-
-.card-archive-info ul li a {
+.program-info .archive{
     display: block;
-    padding: 10px;
     text-decoration: none;
-    color: var(--color-black);
+    text-align: center;
+    padding: 10px;
+    color: var(--color-special-link);
 }
 
-  .card-archive-info a:hover {
+.program-info .archive:hover {
+    background: var(--color-cta);
+    color: var(--color-off-white);
     text-decoration: underline;
-    background: var(--color-secondary);
-    border-radius: .25rem;
-  }
-/* End of the Cards on the Archive page */
+    border-radius: 1em;
+    box-shadow: 2px 2px var(--color-primary);
+}
+
+/*  End of the information cards on the Programs page */
   
 
 .card > * {
@@ -914,10 +890,6 @@ footer{
         grid-column: span 4;
     }
 
-    .card-archive-info {
-        grid-column: span 4;
-    }
-
     .card__description{
         opacity: 0.5;
     }
@@ -993,10 +965,6 @@ footer{
     }
 
     .card-course-info {
-        grid-column: span 4;
-    }
-
-    .card-archive-info {
         grid-column: span 4;
     }
 
