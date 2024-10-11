@@ -152,7 +152,7 @@ nav{
     justify-content: center;
     line-height: 1.5;
     padding: 0 .5em;
-    font-size: 3em;
+    font-size: 2em;
     margin-top: 10px;
     margin-bottom: 10px;
     transition: all .25s ease-in-out;
@@ -168,6 +168,17 @@ nav{
     transform: translateY(4px);
     transition: .2s;
     box-shadow: none;
+}
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    vertical-align: middle;
+    margin-right: .5em;
 }
 /* END - .nav-main */
 
@@ -849,6 +860,7 @@ footer{
         border-top: none;
         border-right: none;
     }
+
     /* End of NAV media query */
 
     .aside-main {
