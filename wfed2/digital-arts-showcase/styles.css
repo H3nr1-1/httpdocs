@@ -179,6 +179,7 @@ nav{
     fill: currentColor;
     vertical-align: middle;
     margin-right: .5em;
+    align-self: center;
 }
 /* END - .nav-main */
 

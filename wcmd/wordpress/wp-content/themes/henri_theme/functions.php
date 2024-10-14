@@ -18,18 +18,34 @@ if ( ! function_exists( 'wcmd_after_setup_theme' ) ) :
      */
     function wcmd_after_setup_theme() {
 
-        // Let WordPress manage the document title.
+        // Let WordPress manage the document title
         add_theme_support( 'title-tag' );
 
-        // Allow Admin users to add Featured Images.
+        // Allow Admin users to add Featured Images
         add_theme_support( 'post-thumbnails' );
-        
+
+        // Add RSS feed links to HTML <head>
+        add_theme_support('automatic-feed-links');
+
         // Define sizes for Featured Images
         add_image_size( 'card-small', 480, 270, true );
         add_image_size( 'card', 847, 270, true );
         add_image_size( 'card-large', 1280, 270, true );
-        
-        
+
+        // Define sizes for Custom Header Image
+        // Allow Admin users to set Custom Header Image.
+        // Path to image is via get_template_directory_uri() active theme or parent theme
+        $custom_header_args = array(
+            'width'         => 570,
+            'height'        => 200,
+            'default-image' => get_template_directory_uri() . '/images/custom-header.png',
+            'uploads'       => true,
+        );
+        add_theme_support( 'custom-header', $custom_header_args );
+
+        // Allow Admin users to set Custom Background Color/Image.
+        add_theme_support( 'custom-background' );
+
         // Output HTML5 style HTML
         add_theme_support( 'html5', array(
           'caption',
@@ -38,10 +54,10 @@ if ( ! function_exists( 'wcmd_after_setup_theme' ) ) :
           'gallery',
           'search-form',
         ) );
-        
+
         // Allow Admin users to add Excerpt content to pages.
         add_post_type_support( 'page', 'excerpt' );
-        
+
         // Register Navigation Menus.
         register_nav_menus(
             array(
@@ -52,31 +68,36 @@ if ( ! function_exists( 'wcmd_after_setup_theme' ) ) :
         );
 
         // Register and Enqueue JavaScript Files
+        // Path to files is via get_template_directory_uri() active theme or parent theme
         function wcmd_enqueue_scripts() {
 
             if(is_home()) {
-             // wp_enqueue_script( Handle              , Path to File                                        , Dependencies ['handle'], Version Number      , Add script Tag Before Closing body Tag )
-                wp_enqueue_script( 'wcmd-splide-script', get_stylesheet_directory_uri() . '/js/splide.min.js', []                     , '4.1.4'            , true );
+             // wp_enqueue_script( Handle              , Path to File                                      , Dependencies ['handle'], Version Number      , Add script Tag Before Closing body Tag )
+                wp_enqueue_script( 'wcmd-splide-script', get_template_directory_uri() . '/js/splide.min.js', []                     , '4.1.4'            , true );
             }
-            
-            wp_enqueue_script( 'wcmd-script', get_stylesheet_directory_uri() . '/js/theme.js', ['jquery'], wp_get_theme()->get('Version'), true );
+
+            wp_enqueue_script( 'wcmd-script', get_template_directory_uri() . '/js/theme.js', ['jquery'], wp_get_theme()->get('Version'), true );
         }
         add_action( 'wp_enqueue_scripts', 'wcmd_enqueue_scripts' );
-        
+
         // Register Enqueue CSS Files
         function wcmd_enqueue_styles() {
-            
-            // wp_enqueue_style( Handle     , Path to File        , Dependencies ['handle'] , Version Number                , CSS Media Type )
-            wp_enqueue_style('wcmd-style', get_stylesheet_uri(), []                      , wp_get_theme()->get('Version'), 'all');
-            
+
+            // Find Theme Version Number from style.css
+            // If parent() theme is true use wp_get_theme()?->parent()->get('Version')
+            // Else use wp_get_theme()->get('Version')
+            $theme_version_number = wp_get_theme()?->parent() ? wp_get_theme()?->parent()->get('Version') : wp_get_theme()->get('Version');
+
+         // wp_enqueue_style( Handle     , Path to File                               , Dependencies ['handle'] , Version Number       , CSS Media Type )
+            wp_enqueue_style('wcmd-style', get_template_directory_uri() . '/style.css', []                      , $theme_version_number, 'all');
+
             if(is_home()) {
-                wp_enqueue_style( 'wcmd-splide-style', get_stylesheet_directory_uri() . '/css/splide.min.css', [], '4.0.17', 'screen' );	
+                wp_enqueue_style( 'wcmd-splide-style', get_template_directory_uri() . '/css/splide.min.css', [], '4.1.4', 'screen' );   
             }
 
         }
         add_action('wp_enqueue_scripts', 'wcmd_enqueue_styles');
-        
-        
+
         // Pagination function.
         function wcmd_paginate() {
             global $paged, $wp_query;
@@ -90,8 +111,8 @@ if ( ! function_exists( 'wcmd_after_setup_theme' ) ) :
                 'end_size' => 2,
                 'mid_size' => 2,
                 'prev_next' => True,
-                'prev_text' => __( '&lt;' ),
-                'next_text' => __( '&gt;' ),
+                'prev_text' => __( '<', 'wcmd' ),
+                'next_text' => __( '>', 'wcmd' ),
                 'type' => 'list'
             );
             echo paginate_links( $args );
@@ -170,7 +191,6 @@ function wcmd_widgets_init() {
 
 }
 add_action( 'widgets_init', 'wcmd_widgets_init' );
-
 
 // Redirect Search Request to /search/search-words vs /?s=search-words
 function wcmd_mod_rewrite_search_url() {

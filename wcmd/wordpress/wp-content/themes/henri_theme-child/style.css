@@ -1,5 +1,5 @@
 /*
-Theme Name: henri_theme
+Theme Name: henri_theme-child
 Theme URI: https://chenrickson1.bitweb1.nwtc.edu
 
 Author: Chris Henrickson
@@ -8,7 +8,8 @@ Author URI: https://chenrickson.bitweb1.nwct.edu
 Description: henri_theme for the Web Content Management Class
 Tags: two-column
 
-Version: 1.0.0
+Template: henri_theme
+Version: 999
 
 Requires at least: 5.0
 Tested up to: 6.0
@@ -17,7 +18,7 @@ Requires PHP: 7.0
 License: GNU GPU
 License URI: https://www.gnu.org/licenses/gpl-3.0.txt
 
-Text Domain: wcmd
+Text Domain: wcmd-child
 
 General comments (optional).
 */
@@ -25,6 +26,7 @@ General comments (optional).
 
 /* =WordPress Core
 -------------------------------------------------------------- */
+
 .alignnone {
     margin: 5px 20px 20px 0;
 }
@@ -36,7 +38,7 @@ div.aligncenter {
 }
 
 .alignright {
-    float: right;
+    float:right;
     margin: 5px 0 20px 20px;
 }
 
@@ -62,14 +64,13 @@ a img.alignleft {
 a img.aligncenter {
     display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto
 }
 
 .wp-caption {
     background: #fff;
     border: 1px solid #f0f0f0;
-    max-width: 96%;
-    /* Image does not overflow the content area */
+    max-width: 96%; /* Image does not overflow the content area */
     padding: 5px 3px 10px;
     text-align: center;
 }
@@ -104,26 +105,23 @@ a img.aligncenter {
 
 /* Text meant only for screen readers. */
 .screen-reader-text {
-    border: 0;
     clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
     position: absolute !important;
+    height: 1px;
     width: 1px;
-    word-wrap: normal !important;
-    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+    overflow: hidden;
 }
 
 .screen-reader-text:focus {
-    background-color: #eee;
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    clip-path: none;
-    color: #444;
+    color: #21759b;
     display: block;
-    font-size: 1em;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
     height: auto;
     left: 5px;
     line-height: normal;
@@ -131,8 +129,7 @@ a img.aligncenter {
     text-decoration: none;
     top: 5px;
     width: auto;
-    z-index: 100000;
-    /* Above WP toolbar. */
+    z-index: 100000; /* Above WP toolbar. */
 }
 
 /* Show Page Info in H1 */
