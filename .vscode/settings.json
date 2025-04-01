@@ -1,5 +1,5 @@
 {
-    "livesassCompile.settings.formats": [
+    "liveSassCompile.settings.formats": [
         {
             "format": "compressed",
             "extensionName": ".css",

@@ -1,0 +1,55 @@
+@use 'variables'as v;
+section {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    overflow: hidden;
+    max-width: 100%;
+
+    h2 {
+        text-align: center;
+        border-bottom: 3px solid v.$color-theme;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        p {
+            padding: 20px;
+            line-height: 1.8;
+            margin: auto;
+            width: 60ch;
+        }
+    }
+}
+
+ul {
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 3em;
+    border: 2px solid v.$color-border;
+    border-radius: 1em;
+    box-shadow: 0 0 10px v.$color-border;
+    width: fit-content;
+
+    li {
+        display: block;
+        padding: 5px;
+
+        a{
+            font-family: "Madimi One", sans-serif;
+            color: v.$color-border;
+            text-decoration: none;
+        }
+    }
+}
+
+.citation {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    white-space: normal;
+}
+
+
+

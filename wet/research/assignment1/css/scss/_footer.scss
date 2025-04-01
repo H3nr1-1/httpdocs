@@ -1,0 +1,32 @@
+@use 'variables'as v;
+footer{
+    padding:20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+    a {
+        padding: 10px;
+        text-decoration: none;
+        color: v.$color-border;        
+
+        &:hover {
+            text-decoration: underline;
+            color: v.$color-theme;
+        }
+    }
+
+
+.foot-links{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+@media screen and (max-width:768px){
+
+    header{
+        font-size: 1.5em;
+    }
+
+}
