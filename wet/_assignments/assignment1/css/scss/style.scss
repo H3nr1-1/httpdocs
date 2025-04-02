@@ -1,0 +1,32 @@
+@use 'header';
+@use 'cards';
+@use 'footer';
+@use 'variables'as v;
+@use 'grid';
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: v.$color-off-white;
+    padding: 0;
+}
+
+.wrapper{
+    margin: 0 auto;
+    align-items: center;   
+    background: v.$color-off-white;
+    max-width: 80%;
+}
+
+.class-info {
+    padding-top: 5em;
+}
+
+main {
+    padding-top: 5em;
+    padding-bottom: 5em;
+}

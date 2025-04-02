@@ -1,0 +1,56 @@
+@use 'variables'as v;
+
+.card {
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    padding: 15px;
+    max-width: 300px;
+    height: 400px;
+    border: 2px solid v.$color-black;
+    box-shadow: 10px 10px 10px v.$color-black;
+    border-radius: 0 1em 1em 0;
+    text-align: center;
+    justify-self: center; 
+
+    h2.card_title {
+        padding: 5px;
+        height: 4rem;
+
+        a {
+            color: v.$color-white;
+            -webkit-text-stroke: 1px v.$color-background;
+            font-size: 2rem;
+            text-decoration: none;
+            padding: 0;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+                width: 0;
+                height: 3px;
+                background: v.$color-black;
+                transition: width 0.4s ease-in-out;
+            }
+    
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.assignments {
+    background: url(../images/assignments.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.research_documentation {
+    background: url(../images/research-documentation.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

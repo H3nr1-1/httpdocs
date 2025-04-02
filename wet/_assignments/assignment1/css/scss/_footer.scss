@@ -1,0 +1,40 @@
+@use 'variables'as v;
+
+footer {
+    background: v.$color-dark-gray;
+    padding: 20px;
+    border-top: 3px solid v.$color-black;
+    padding: 3em;
+}
+
+.foot-links {
+    display: grid; 
+}
+
+.foot-links div {
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+    gap: 15px;
+    
+    a {
+        padding: 10px;
+        text-decoration: none;
+        color: v.$color-background;
+        border-radius: 10px;
+        box-shadow: 0 0 10px v.$color-black;
+        background: v.$color-white;
+    
+        &:hover {
+            color: v.$color-link;
+            box-shadow: 0 0 20px v.$color-black;
+        }
+    }
+}
+
+
+
+
+
+
+

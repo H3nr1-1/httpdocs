@@ -1,0 +1,32 @@
+@use 'variables'as v;
+
+header {
+    width: 100%; 
+
+    .hero {
+        background: url(../images/hero-banner-2.webp);
+        background-repeat: no-repeat;
+        background-size: cover; 
+        height: auto; 
+        min-height: 425px; 
+        border-bottom: 3px solid v.$color-black;
+
+        h1 {
+            padding-top: 3em;
+            font-size: 3em;
+            color: v.$color-white;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        h3 {
+            padding-top: 1em;
+            font-size: 2em;
+            color: v.$color-white;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
