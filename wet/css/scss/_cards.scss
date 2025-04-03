@@ -18,9 +18,10 @@
         height: 4rem;
 
         a {
-            color: v.$color-white;
-            -webkit-text-stroke: 1px v.$color-background;
             font-size: 2rem;
+            font-weight: 900;
+            color: v.$color-white;
+            text-shadow: 1px 1px v.$color-black;
             text-decoration: none;
             padding: 0;
             position: relative;
@@ -43,14 +44,16 @@
     }
 }
 
-.assignments {
-    background: url(../images/assignments.webp);
+@mixin background-image($image) {
+    background: url($image);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+.assignments {
+    @include background-image("../images/assignments.webp");
+}
+
 .research_documentation {
-    background: url(../images/research-documentation.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include background-image("../images/research-documentation.webp");
 }

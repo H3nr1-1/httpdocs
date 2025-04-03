@@ -8,7 +8,7 @@ footer {
 }
 
 .foot-links {
-    display: grid; 
+    display: grid;
 }
 
 .foot-links div {
@@ -24,10 +24,11 @@ footer {
         border-radius: 10px;
         box-shadow: 0 0 10px v.$color-black;
         background: v.$color-white;
+        transition: 0.2s ease-in;
     
         &:hover {
             color: v.$color-link;
-            box-shadow: 0 0 20px v.$color-black;
+            box-shadow: 0 0 20px v.$color-link;
         }
     }
 }
