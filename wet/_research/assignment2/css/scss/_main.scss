@@ -1,0 +1,53 @@
+@use 'variables'as v;
+section {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    overflow: hidden;
+    max-width: 100%;
+
+    h2 {
+        text-align: center;
+        border-bottom: 3px solid v.$color-theme;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        p {
+            padding: 20px;
+            line-height: 1.8;
+            margin: auto;
+            width: 60ch;
+        }
+    }
+}
+
+cite {
+    display: block;
+    margin: auto;
+    max-width: 60ch;
+}
+
+.example {
+    max-width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 1em;
+
+    h2{
+        color: white;
+    }
+}
+
+
+.code-container {
+  max-width: 100%;
+  overflow-x: auto; /* Allow horizontal scroll */
+  padding: 0 10px;
+}
+
+
+

@@ -1,0 +1,43 @@
+@use 'header';
+@use 'main';
+@use 'footer';
+@use 'variables' as v;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: v.$color-theme;
+}
+
+.wrapper{
+    margin: 0 auto;
+    display: grid;
+    justify-content: center; /* Center horizontally */
+    align-items: center;   
+    background: v.$color-secondary-theme;
+    max-width:1000px;
+    border: 3px solid v.$color-border;
+    box-shadow: 0px 0px 15px v.$color-border;
+    font-family: "Chela One", system-ui;
+    flex-direction: column;
+}
+
+h1{
+    color:v.$color-headings;
+}
+
+h2{
+    color: v.$color-headings;
+    font-size: 2em;
+}
+
+@media screen and (max-width:768px){
+
+    header{
+        font-size: 1.5em;
+    }
+}

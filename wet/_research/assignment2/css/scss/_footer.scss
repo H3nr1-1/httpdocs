@@ -1,0 +1,47 @@
+@use 'variables'as v;
+footer{
+    padding:20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    a {
+        padding: 10px 16px;
+        color: rgb(18, 18, 18);
+        text-shadow: 1px 1px black;
+        background-color: rgba(11, 8, 202, 0.1);
+        border: 2px solid rgb(6, 6, 6);
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s, transform 0.1s ease;
+    
+        &:hover {
+            color: rgb(240, 241, 246);
+            background-color: rgba(5, 20, 161, 0.852);
+        }
+    
+        &:active {
+            animation: clickEffect 0.2s ease;
+            transform: scale(0.95);
+        }
+    }
+}
+
+
+@keyframes clickEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.foot-links{
+    display: flex;
+    justify-content: flex-end;
+}
