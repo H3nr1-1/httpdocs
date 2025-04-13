@@ -6,9 +6,10 @@ footer{
 
     a {
         padding: 10px 16px;
+        margin: 5px;
         color: rgb(18, 18, 18);
         text-shadow: 1px 1px black;
-        background-color: rgba(11, 8, 202, 0.1);
+        background-color: v.$color-secondary-theme;
         border: 2px solid rgb(6, 6, 6);
         border-radius: 5px;
         text-decoration: none;
