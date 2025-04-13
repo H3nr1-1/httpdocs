@@ -13,4 +13,14 @@ section {
         margin: auto;
         margin-top: 1em;
     }
+
+    a {
+        margin-top: 2em;
+        margin-left: 6em;
+        padding: 5px;
+        border: 2px solid v.$color-border;
+        background: v.$color-headings;
+        color: v.$color-secondary-theme;
+        box-shadow: 2px 2px v.$color-theme;
+    }
 }
