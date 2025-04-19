@@ -1,0 +1,13 @@
+@use 'variables' as v;
+
+header {
+    text-align: center;
+    padding: 4em;
+    background: v.$color-secondary;
+    border-bottom: 3px solid  v.$color-secondary;
+
+    h1 {
+        width: fit-content(200px); 
+        font-size: calc(2vw + 20px);
+    }
+}

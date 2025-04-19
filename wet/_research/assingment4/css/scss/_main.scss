@@ -1,0 +1,69 @@
+@use 'variables' as v;
+
+section {
+    text-align: center;
+    margin: auto;
+
+    h2 {
+        font-size: 1.4em;
+        margin-top: 1em;
+    }
+
+    p {
+        text-align: left;
+        max-width: 70%;
+        margin: auto;
+        padding: 10px;
+
+        @media (max-width: 768px) {
+            max-width: 50%;
+        }
+    } 
+
+    p.citation {
+        font-style: italic;
+        max-width: 80ch;
+
+        @media (max-width: 768px) {
+            max-width: 45ch;
+        }
+    }
+}
+
+.demo-container {
+    max-width: 60%;
+    margin: auto;
+    margin-top: 1em;
+    background: v.$color-black;
+    border: 2px solid v.$color-border;
+    box-shadow: 0 0 10px v.$color-black;
+    padding: 1em;
+    text-align: center; 
+    
+    h3 {
+        margin-top: 1em;
+        color: v.$color-white;
+        font-size: 2em;
+        padding: 15px;
+    }
+    
+    pre {
+        display: inline-block;       
+        background-color: v.$color-code-background;      
+        color: v.$color-code-demo;
+        padding: 1em;
+        border-radius: 8px;
+        overflow-x: auto;
+        max-width: 75%;
+        font-family: 'Courier New', Courier, monospace;
+        white-space: pre;            
+        text-align: initial;     
+        white-space: pre;    
+    }
+    
+    code {
+        font-family: inherit;
+        color: inherit;
+    }
+}
+

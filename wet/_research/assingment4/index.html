@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>4R - CSS Functions</title>
+</head>	
+	<body>
+
+        <header>
+            <h1>4R - CSS Functions</h1>
+        </header>
+
+        <div class="wrapper">
+
+
+            <section>
+                <h2>CSS Function: calc()</h2>
+                <p>The calc() function in CSS allows you to perform math operations directly in style rules, making it easier to mix units like percentages and pixels. It's useful for creating responsive layouts—for example, setting width: calc(100% - 250px) to account for a sidebar. You can also combine units like rem and vw for dynamic font sizes. Always include spaces around operators (+, -, *, /) for correct syntax. calc() helps control spacing, sizing, and positioning without extra HTML or JavaScript, making it a powerful tool for building flexible, adaptive designs in modern CSS.</p><br>
+
+                <h2>CSS function: fit-content()</h2>
+                <p>The fit-content() function in CSS allows an element to grow based on its content size, up to a specified limit. It’s ideal for components like buttons, tags, or code blocks that shouldn’t stretch wider than necessary. For example, width: fit-content(300px) means the element will size to its content but not exceed 300px. This function is especially helpful in responsive design, keeping elements tidy without overflowing their containers. It's often used with max-width or inside grid and flex layouts. Overall, fit-content() provides better control over element sizing based on dynamic content.</p><br>
+
+                <h2>CSS Function: clamp()</h2>
+                <p>The clamp() function in CSS lets you set a responsive value with a defined minimum, preferred, and maximum. It takes three values: clamp(min, preferred, max). For example, font-size: clamp(1rem, 2vw, 2rem) allows the font size to scale with the viewport but stay between 1rem and 2rem. This is especially useful for responsive typography, margins, or spacing without media queries. clamp() ensures your design remains flexible while preventing values from becoming too small or too large, making it a powerful tool for modern, fluid layouts.</p><br>
+                <br>
+
+                <h2>CSS Function: max()</h2>
+                <p>The max() function in CSS selects the largest value from a set of given options. It's useful when you want an element to be at least a certain size, even if other units are smaller. For example, width: max(300px, 50%) ensures the element is always at least 300px wide, but can grow larger if 50% of the container is bigger. This is helpful in responsive design to maintain readability and layout stability. max() works with various units like px, %, em, and vw, giving you greater control over how elements scale across different screen sizes.</p><br>
+                <br>
+
+                <p class="citation">"Research and document 4 different CSS function." ChatGPT, GPT 3.5, OpenAI, November 2022, https://chatgpt.com/c/6802612d-cf74-8001-a871-7ab5e91e0cdf</p>
+
+                <h2>Demonstration Code</h2>
+                <div class="demo-container">
+                    <h3>calc()</h3>
+                    <pre><code>
+    h1 {
+        font-size: calc(2vw + 20px); // demo function
+    }
+                    </code></pre>
+
+                    <h3>fit-content()</h3>
+                    <pre><code>
+    header {
+        text-align: center;
+        padding: 4em;
+        background: lightgray;
+        border-bottom: 3px solid black;
+
+        h1 {
+            width: fit-content(200px); // demo function
+            font-size: calc(2vw + 20px);
+        }
+    }
+                    </code></pre>
+
+                    <h3>clamp()</h3>
+                    <pre><code>
+    section {
+        text-align: center;
+
+        h2 {
+            font-size: clamp(1.25rem, 1.5vw + 1rem, 2rem); // demo function
+            margin-top: 1em;
+        }
+    }
+                    </code></pre>
+
+                    <h3>max()</h3>
+                    <pre><code>
+    .wrapper{
+        margin: 2em auto;
+        display: grid;
+        padding: 2em;
+        justify-content: center;
+        align-items: center;   
+        background: lightgray;
+        max-width: max(90%, 1200px); // demo function
+        border: 3px solid black;
+        box-shadow: 0px 0px 15px black;
+    }
+                    </code></pre>
+                </div>
+                
+            </section>
+
+        </div>
+                       
+			<footer class="foot-links">
+				<a class="home" href="/wfed2/index.html">&copy; 2024 - Chris</a>
+				<a href="javascript:location='https://jigsaw.w3.org/css-validator/validator?uri='+escape(location)">CSS</a>
+				<a href="javascript:location='https://validator.w3.org/nu/?doc='+escape(location)">HTML</a>
+			</footer>
+
+	</body>
+</html>
