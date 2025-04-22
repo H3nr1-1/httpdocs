@@ -19,13 +19,27 @@ section {
             max-width: 50%;
         }
     } 
-
-    p.citation {
-        font-style: italic;
-        max-width: 80ch;
-
-        @media (max-width: 768px) {
-            max-width: 45ch;
+    
+    ul {
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 5em;
+        border: 2px solid v.$color-primary;
+        background: v.$color-cta;
+        border-radius: 1em;
+        box-shadow: 0 0 10px v.$color-black;
+        width: fit-content;
+    
+        li {
+            display: block;
+            padding: 5px;
+    
+            a{
+                font-family: "Madimi One", sans-serif;
+                color: v.$color-white;
+                text-decoration: none;
+            }
         }
     }
 }

@@ -1,0 +1,36 @@
+@use 'variables' as v;
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 1.5rem;
+
+        li {
+            display: inline;
+            border: 1px solid white;
+            padding: 5px;
+            border-radius: 10px;
+
+            a {
+                text-decoration: none;
+                font-weight: bold;
+                transition: 0.2s ease-in;
+                color: darkblue;  
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        ul {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
