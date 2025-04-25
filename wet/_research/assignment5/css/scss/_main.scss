@@ -1,0 +1,89 @@
+@use 'variables' as v;
+
+section {
+    background: v.$color-primary;
+    border: 2px solid v.$color-black;
+    box-shadow: 5px 5px 15px v.$color-black;
+    padding: 2em;
+
+    @media (width <= 768px) {
+        background: v.$color-wrapper;
+    }
+
+    .card {
+        background: v.$color-primary;
+        border: 1px solid v.$color-black;
+        border-radius: 10px;
+        box-shadow: 3px 3px 8px v.$color-black;
+        margin-top: 25px;
+
+        .card-title {
+            padding: 10px;
+            text-align: center;
+            font-size: 1.4em;
+            background: v.$color-black;
+            color: v.$color-white;
+            border-bottom: 3px solid v.$color-white;
+            border-radius: 10px 10px 0 0;            
+        }
+
+        .card-link {
+            text-align: center;
+            width: fit-content;
+            margin: 15px auto;
+            padding: 5px;
+            background: v.$color-white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px inset v.$color-link-text;
+            transition: all 0.2s ease;
+            font-weight: 700;
+
+            &:hover {
+                background: v.$color-cta;
+            }
+
+            a {
+                text-decoration: none;
+                color: v.$color-link-text;
+
+                &:hover {
+                    color: v.$color-white;
+                }
+            }
+        }
+
+        .card-body {
+            padding: 30px; 
+            margin: auto;
+            background: v.$color-primary;
+            text-align: left;
+        }        
+    }
+
+    .card-list {
+        background: v.$color-primary;
+        box-shadow: 0 0 10px v.$color-black;
+        margin-top: 25px;
+        padding: 15px;
+
+        .list {
+            text-align: center;
+
+            h2 {
+                font-size: 1.8em;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+
+            ul li {
+                margin: 10px auto;
+                text-align: left;
+                max-width: 50%;
+
+                @media (width <= 768px) {
+                    max-width: 90%;
+                }
+            }
+        }
+    }
+}
