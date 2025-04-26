@@ -1,0 +1,21 @@
+@use 'header';
+@use 'grid';
+@use 'main';
+@use 'footer';
+@use 'variables' as v;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(225, 238, 248);
+}
+
+.wrapper {
+    max-width: 90%;
+    margin: auto;
+    background: rgb(189, 219, 244);
+}

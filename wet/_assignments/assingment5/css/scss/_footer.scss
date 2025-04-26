@@ -1,0 +1,51 @@
+@use 'variables'as v;
+
+footer{
+    padding:20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    a {
+        padding: 10px 16px;
+        margin: 5px;
+        color: v.$color-black;
+        text-shadow: 1px 1px v.$color-black;
+        background-color: v.$color-white;
+        border: 2px solid v.$color-black;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s, transform 0.1s ease;
+    
+        &:hover {
+            color: v.$color-white;
+            background-color: v.$color-cta;
+            box-shadow: 0 0 25px v.$color-cta;
+        }
+    
+        &:active {
+            animation: clickEffect 0.2s ease;
+            transform: scale(0.95);
+            box-shadow: none;
+        }
+    }
+}
+
+
+@keyframes clickEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.foot-links{
+    display: flex;
+    justify-content: flex-end;
+}
