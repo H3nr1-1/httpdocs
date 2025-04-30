@@ -2,11 +2,31 @@
 
 header {
     padding: 3em;
-    background: rgb(106, 145, 177);
-    box-shadow: 0 0 25px inset black;
+    background: v.$color-outlines;
+    box-shadow: 0 0 25px inset v.$color-black;
 
     h1 {
         text-align: center;
         font-size: 3.5em;
+    }
+
+    button {
+        display: block;
+        margin: 2em auto;
+        padding: 15px;
+        background: v.$color-primary;
+        border-radius: 15px;
+        box-shadow: 0 0 10px inset v.$color-shadow;
+        color: v.$color-cta;
+        font-weight: 900;
+        transition: 0.2s ease-in;
+
+        &:hover {
+            box-shadow: 0 0 15px v.$color-cta;
+
+            &:active {
+                box-shadow: none;
+            }
+        }
     }
 }

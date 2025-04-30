@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" href="css/prism.css" type="text/css">
 	<title>Chris Henrickson - Web Development</title>
 </head>	
 	<body>
@@ -12,13 +13,116 @@
 		<header class="grid-12">            
 			<div class="grid-12-span-12">
 				<h1>5A -Technology Demo</h1>
+				<button id="theme-toggle">Toggle Dark/Light</button>
 			</div>
 		</header>
 
 		<div class="wrapper">	
 
-            <section class="grid-12">
-                
+            <section>
+
+				<div class="grid-12">
+					<div class="grid-12-span-4-10">
+						<h2>Dark / Light Page Toggle</h2>
+					</div>
+				</div>
+
+				<div class="grid-12">
+					<div class="grid-12-span-1-6">
+						<p>Dark / Light toggles aren't exactly a "new" technology, but they have only been around for a couple of years.  People always have a preference.  For me, its the dark mode.  In my opinion it helps with less strain on my eyes.  Thats why I choose to research and do my tech demo on a dark and light toggler.  The blog I researched was written June 20, 2023 by: Salma Alam-Naylor.  Its titled "The Best Light / Dark Mode Theme Toggle in JavaScript."</p>
+						<h5>Source: https://dev.to/whitep4nth3r/the-best-lightdark-mode-theme-toggle-in-javascript-368f</h5>
+					</div>
+					<div class="grid-12-span-6-12">
+						<img src="images/dark-mode-screenshot.webp" alt="An image of a dark mode screen.">
+					</div>
+				</div>
+
+				<div class="grid-12">
+					<div class="grid-12-span-2-10">
+						<h2>History of Dark / Light Mode</h2>
+						<p>The (prefers-color-scheme) property was first introduced to CSS in 2019 by the W3C.  It was made to allow developers to detects a users preference in light or dark mode.  Its main purpose is to automatically detect the users preference of light or dark mode determined by what they have selected on their machine and applying it to the website if able to.</p>
+						<h5>Source: https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme</h5>
+					</div>
+				</div>
+
+				<div class="grid-12">
+					<div class="grid-12-span-12">
+						<h2>Javascript Demo Code</h2>
+					</div>
+				</div>
+
+				<div class="grid-12">
+					<div class="grid-12-span-2-10">
+						<p>In the JavaScript demo code, I am targeting the wrapper.  The toggle in the header changes the theme from dark to light by changing the background of the wrapper from a light blue to black.  The prefer-color-scheme property looks to is used to see what the user has chosen for their theme.  If the user leaves the page and then comes back the JavaScript uses a function to save the users choice in memory for when the user comes back to the site.  The theme will stay and be called back to the page when opened up.</p>
+					</div>
+				</div>
+
+				<div class="grid-12">
+					<div class="grid-12-span-4-10">
+						<pre><code class="language-javascript">
+const toggleButton = document.getElementById('theme-toggle');
+const wrapper = document.querySelector('.wrapper');
+
+// Function to apply a theme
+function applyTheme(theme) {
+  if (theme === 'dark') {
+    wrapper.classList.add('dark-mode');
+  } else {
+    wrapper.classList.remove('dark-mode');
+  }
+}
+
+// check if a theme was selected first
+const storedTheme = localStorage.getItem('theme');
+
+if (storedTheme) {
+  // if a theme is chosen previously, use that.
+  applyTheme(storedTheme);
+} else {
+  // else, check if there is a system preference
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(prefersDark ? 'dark' : 'light');
+}
+
+// when the toggler is clicked
+toggleButton.addEventListener('click', () => {
+  if (wrapper.classList.contains('dark-mode')) {
+    wrapper.classList.remove('dark-mode');
+    localStorage.setItem('theme', 'light');
+  } else {
+    wrapper.classList.add('dark-mode');
+    localStorage.setItem('theme', 'dark');
+  }
+});
+						</code></pre>
+					</div>
+				</div>
+
+				<div class="grid-12">
+					<div class="grid-12-span-12">
+						<h2>CSS Demo Code</h2>
+					</div>
+				</div>
+
+				<div class="grid-12">
+					<div class="grid-12-span-4-10">
+						<pre><code class="language-css">
+.wrapper {
+	max-width: 90%;
+	margin: auto;
+	background: rgb(189, 219, 244);
+	color: black;
+	border-radius: 10px;
+	transition: background 0.3s ease, color 0.3s ease;
+	}
+	
+.wrapper.dark-mode {
+	background: rgb(50, 50, 50); 
+	color: white; 
+}
+						</code></pre>
+					</div>
+				</div>
 
             </section>
 
@@ -32,5 +136,7 @@
 			</div>
 		</footer>
 
+		<script src="js/script.js"></script>
+		<script src="js/prism.js"></script>
 	</body>
 </html>

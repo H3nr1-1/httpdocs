@@ -1,0 +1,50 @@
+@use 'variables' as v;
+
+section {
+   padding: 10px 10px;
+    display: grid;
+    align-items: center; 
+  
+    h2 {
+      margin: 2em;
+      text-align: center;
+      font-size: 2.2em;
+    }
+  
+    p {
+      text-align: left;
+      padding: 5px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      font-size: 1.2em;
+    }
+  
+    h5 {
+      margin-bottom: 15px;
+    }
+  
+    img {
+      display: block;
+      margin: auto;
+      border-radius: 15px;
+      box-shadow: 3px 3px 10px v.$color-cta;
+      max-width: 100%;
+    }
+  
+    code[class*="language-javascript"] {
+      overflow-x: auto;
+      max-width: 100%;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      box-sizing: border-box; 
+    }
+
+    code[class*="language-css"] {
+      overflow-x: auto;
+      max-width: 100%;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      box-sizing: border-box; 
+    }
+  }
