@@ -32,19 +32,12 @@ section {
       max-width: 100%;
     }
   
-    code[class*="language-javascript"] {
+    code[class*="language-"] {
       overflow-x: auto;
       max-width: 100%;
       white-space: pre-wrap;
       word-wrap: break-word;
       box-sizing: border-box; 
-    }
-
-    code[class*="language-css"] {
-      overflow-x: auto;
-      max-width: 100%;
-      white-space: pre-wrap;
-      word-wrap: break-word;
-      box-sizing: border-box; 
+      padding: 0;
     }
   }
